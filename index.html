@@ -624,7 +624,7 @@
                                     <div class="text-[11px] text-[#86868b]">Sony ZV-E10 + Tamron 70-200mm f/2.8 Aufnahmen &amp; Photoshop Retusche</div>
                                 </div>
                             </div>
-                            <span class="badge-mono text-[#0071e3] font-bold">+149 €</span>
+                            <span class="badge-mono text-[#0071e3] font-bold">+100 €</span>
                         </div>
 
                         <div onclick="toggleAddon('seo')" id="addon-seo" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-70 flex items-center justify-between cursor-pointer transition-all">
@@ -839,7 +839,7 @@
 
         function recalc() {
             let total = (currentScope === 'single') ? 399 : 599;
-            if (hasPhoto) total += 149;
+            if (hasPhoto) total += 100;
             if (hasSeo) total += 99;
             document.getElementById('total-price').innerText = total + ' €';
         }
@@ -853,11 +853,11 @@
 
         function triggerWhatsAppQuote() {
             let total = (currentScope === 'single') ? 399 : 599;
-            if (hasPhoto) total += 149;
+            if (hasPhoto) total += 100;
             if (hasSeo) total += 99;
 
             const scopeText = currentScope === 'single' ? 'One-Pager Express Website (399 €)' : 'Multi-Page Business Website (599 €)';
-            const photoText = hasPhoto ? '+ 4K Vor-Ort Foto-Shooting mit Marcel (149 €)' : '';
+            const photoText = hasPhoto ? '+ 4K Vor-Ort Foto-Shooting mit Marcel (100 €)' : '';
             const seoText = hasSeo ? '+ Google Maps & Local SEO Setup (99 €)' : '';
             const msg = `Hallo Daoud & Marcel! Ich habe auf eurer MD Digital Website folgendes Paket konfiguriert: ${scopeText} ${photoText} ${seoText} (Gesamt: ${total} €). Ich möchte ein unverbindliches Kennenlernen in Wien vereinbaren!`;
 
