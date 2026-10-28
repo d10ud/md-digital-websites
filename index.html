@@ -6,7 +6,7 @@
     <title>MD DIGITAL — High-End Webdesign & Cinema Media Wien</title>
     <meta name="description" content="MD Digital - Daoud Sahel & Marcel Pasik. Minimalistische Webarchitektur & 4K Cinema-Produktion für Wiener Unternehmen.">
     
-    <!-- Fonts: Inter & JetBrains Mono -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,26 +25,10 @@
                         mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
-                        dark: {
-                            950: '#030305',
-                            900: '#07070a',
-                            850: '#0c0d12',
-                            800: '#12141c',
-                            700: '#1b1e2b',
-                        }
-                    },
-                    animation: {
-                        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'shimmer': 'shimmer 2.5s linear infinite',
-                    },
-                    keyframes: {
-                        'border-beam': {
-                            '100%': { 'offset-distance': '100%' },
-                        },
-                        'shimmer': {
-                            'from': { 'backgroundPosition': '0 0' },
-                            'to': { 'backgroundPosition': '-200% 0' }
+                        brand: {
+                            gold: '#e5c07b',
+                            blue: '#3b82f6',
+                            emerald: '#10b981',
                         }
                     }
                 }
@@ -53,25 +37,24 @@
     </script>
 
     <style>
-        /* Tesla / Linear Style Precision Border & Spotlight */
         :root {
             --mouse-x: 50%;
             --mouse-y: 50%;
         }
 
-        .tesla-spotlight-card {
+        /* Tesla / Linear Precision Spotlight Card */
+        .spotlight-card {
             position: relative;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%),
-                        #0a0a0f;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.05), transparent 40%),
+                        #08090e;
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: border-color 0.3s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .tesla-spotlight-card:hover {
-            border-color: rgba(255, 255, 255, 0.25);
+        .spotlight-card:hover {
+            border-color: rgba(255, 255, 255, 0.22);
         }
 
-        /* Subtle Tesla Grid */
         .tesla-grid {
             background-size: 60px 60px;
             background-image: 
@@ -79,51 +62,36 @@
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         }
 
-        /* Interactive Magic Button Shimmer */
-        .btn-shimmer {
-            background: linear-gradient(110deg, #11141e 45%, #2a3149 55%, #11141e);
-            background-size: 200% 100%;
-            animation: shimmer 3s infinite;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        .btn-shimmer:hover {
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-        }
-
-        /* Glass Pill */
         .glass-pill {
-            background: rgba(15, 17, 24, 0.65);
+            background: rgba(13, 15, 22, 0.75);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.09);
         }
 
-        /* High-End Micro Badge */
         .badge-mono {
             font-family: 'JetBrains Mono', monospace;
             font-size: 11px;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
         }
 
-        /* Hide scrollbars cleanly */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 5px; height: 5px; }
         ::-webkit-scrollbar-track { background: #030305; }
-        ::-webkit-scrollbar-thumb { background: #222634; border-radius: 999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        ::-webkit-scrollbar-thumb { background: #1f2438; border-radius: 999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
     </style>
 </head>
 <body class="tesla-grid min-h-screen">
 
-    <!-- Subtle Ambient Glow Orbs -->
-    <div class="fixed top-[-20%] left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-blue-600/10 via-indigo-600/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[160px] pointer-events-none -z-10"></div>
+    <!-- Ambient Glow Top -->
+    <div class="fixed top-[-15%] left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-blue-600/10 via-indigo-600/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
 
-    <!-- TESLA-STYLE FLOATING PILL NAV -->
+    <!-- TESLA FLOATING PILL NAVBAR -->
     <div class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
         <header class="glass-pill rounded-full px-5 py-2.5 flex items-center justify-between gap-8 max-w-4xl w-full shadow-2xl transition-all">
-            <!-- Brand -->
+            <!-- Logo -->
             <a href="#" class="flex items-center gap-2.5 group">
                 <div class="w-7 h-7 rounded-full bg-white text-black font-extrabold flex items-center justify-center text-xs tracking-tighter group-hover:scale-105 transition-transform">
                     MD
@@ -134,108 +102,256 @@
                 </span>
             </a>
 
-            <!-- Nav Links -->
+            <!-- Links -->
             <nav class="hidden md:flex items-center gap-7 text-xs font-medium text-slate-400">
-                <a href="#demos" class="hover:text-white transition-colors">Live Demos</a>
-                <a href="#gear" class="hover:text-white transition-colors">Camera Rig</a>
+                <a href="#demos" class="hover:text-white transition-colors">Showcases</a>
+                <a href="#camera-gear" class="hover:text-white transition-colors">Sony 4K Gear</a>
+                <a href="#vergleich" class="hover:text-white transition-colors">Qualitäts-Vergleich</a>
                 <a href="#team" class="hover:text-white transition-colors">Über Uns</a>
-                <a href="#calculator" class="hover:text-white transition-colors">Konfigurator</a>
+                <a href="#konfigurator" class="hover:text-white transition-colors">Preise & Paket</a>
             </nav>
 
-            <!-- Tesla Pill Button -->
+            <!-- CTA -->
             <div class="flex items-center gap-3">
-                <a href="#calculator" class="px-4 py-1.5 rounded-full bg-white text-black hover:bg-slate-200 text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
+                <a href="#konfigurator" class="px-4 py-1.5 rounded-full bg-white text-black hover:bg-slate-200 text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
                     Projekt starten
                 </a>
             </div>
         </header>
     </div>
 
-    <!-- MAIN WRAPPER -->
+    <!-- MAIN CONTENT WRAPPER -->
     <main class="pt-36 pb-32 px-5 sm:px-8 max-w-6xl mx-auto space-y-36">
 
-        <!-- HERO SECTION (Minimalist, Bold, Tesla Aesthetic) -->
-        <section class="text-center space-y-8 pt-8">
-            <!-- Live Status Pill -->
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full glass-pill text-xs font-mono text-slate-300">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Wien · Q4 Kapazität verfügbar</span>
+        <!-- 1. HERO SECTION -->
+        <section class="text-center space-y-8 pt-6">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill text-xs font-mono text-slate-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>Wien & Umgebung · Sony 4K Media & Custom Code</span>
                 <span class="text-slate-600">|</span>
-                <span class="text-slate-400">Sony 4K + Custom Architecture</span>
+                <span class="text-slate-400">Kein Baukasten-Lag</span>
             </div>
 
-            <!-- Big Tesla-Style Clean Headline -->
             <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] text-white max-w-5xl mx-auto leading-[1.02]">
-                Digitale Präsenz.<br>
-                <span class="bg-gradient-to-r from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">Ohne Kompromisse.</span>
+                Websites, die verkaufen.<br>
+                <span class="bg-gradient-to-r from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">Fotos, die beeindrucken.</span>
             </h1>
 
-            <!-- Subhead -->
             <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-                Wir bauen kompromisslos schnelle Websites für Wiener Betriebe – kombiniert mit professioneller 4K-Foto- & Videoproduktion direkt vor Ort in Ihrem Geschäft.
+                Schluss mit generischen Stockfotos und langsamen WordPress-Vorlagen. Wir bauen kompromisslos schnelle Websites und kommen mit unserer <strong class="text-white font-semibold">Sony 4K Kamera</strong> direkt zu Ihnen nach Wien, um Ihr Team, Ihren Laden und Ihre Produkte in Szene zu setzen.
             </p>
 
-            <!-- Interactive Action Hub -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <a href="#demos" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-black hover:bg-slate-100 font-bold text-sm flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02] active:scale-[0.98]">
                     <i data-lucide="play" class="w-4 h-4 fill-current"></i>
-                    <span>Live Demos testen</span>
+                    <span>Live Demos ansehen</span>
                 </a>
-                <a href="https://wa.me/?text=Hallo%20MD%20Digital,%20ich%20m%C3%B6chte%20eine%20Website%20in%20Wien%20anfragen!" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full btn-shimmer text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all">
+                <a href="https://wa.me/?text=Hallo%20MD%20Digital,%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20in%20Wien!" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full glass-pill hover:bg-white/10 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all">
                     <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-                    <span>WhatsApp Direktkontakt</span>
+                    <span>WhatsApp Erstgespräch</span>
                 </a>
             </div>
 
-            <!-- Precision Stats Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-12 max-w-4xl mx-auto">
-                <div class="tesla-spotlight-card p-4 rounded-2xl text-left">
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-10 max-w-4xl mx-auto">
+                <div class="spotlight-card p-4 rounded-2xl text-left">
                     <div class="badge-mono text-slate-500">Ladezeit</div>
                     <div class="text-2xl font-bold font-mono text-white mt-1">&lt; 0.4s</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">100/100 Google Lighthouse</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Google Lighthouse 100/100</div>
                 </div>
-                <div class="tesla-spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Kamera-Rig</div>
+                <div class="spotlight-card p-4 rounded-2xl text-left">
+                    <div class="badge-mono text-slate-500">Foto & Video</div>
                     <div class="text-2xl font-bold font-mono text-white mt-1">Sony 4K</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">APS-C + Tamron 70-200mm</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Tamron 70-200mm f/2.8</div>
                 </div>
-                <div class="tesla-spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Architektur</div>
-                    <div class="text-2xl font-bold font-mono text-white mt-1">Pure Code</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Kein WordPress-Lag</div>
+                <div class="spotlight-card p-4 rounded-2xl text-left">
+                    <div class="badge-mono text-slate-500">Codebasis</div>
+                    <div class="text-2xl font-bold font-mono text-white mt-1">100% Handcrafted</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Zero Bloatware</div>
                 </div>
-                <div class="tesla-spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Standort</div>
-                    <div class="text-2xl font-bold font-mono text-white mt-1">Wien</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Persönlich vor Ort</div>
+                <div class="spotlight-card p-4 rounded-2xl text-left">
+                    <div class="badge-mono text-slate-500">Service</div>
+                    <div class="text-2xl font-bold font-mono text-white mt-1">Wien vor Ort</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Persönliches Kennenlernen</div>
                 </div>
             </div>
         </section>
 
-        <!-- INTERACTIVE LIVE DEMO SCREEN (MacBook / Studio Display Mockup) -->
+        <!-- 2. PRODUCTION HARDWARE RIG (REAL SONY & TAMRON PHOTOGRAPHY) -->
+        <section id="camera-gear" class="space-y-8 scroll-mt-28">
+            <div class="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                    <span class="badge-mono text-emerald-400">Hardware & Optik</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+                        Unser Kamera-Setup. Studio-Qualität vor Ort.
+                    </h2>
+                </div>
+                <span class="badge-mono text-slate-500">Marcel Pasik · Director of Photography</span>
+            </div>
+
+            <!-- Bento Rig with Real Gear Images -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+                <!-- Card 1: Sony ZV-E10 Body with Real Image -->
+                <div class="md:col-span-7 spotlight-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                    <div class="p-8 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-mono text-blue-400">Cinema Mirrorless Body</span>
+                            <span class="badge-mono text-slate-400">4K HDR Video & 24.2 MP</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Sony ZV-E10</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-lg">
+                            Ausgestattet mit einem großen APS-C Kamerasensor, 4K Oversampling und blitzschnellem Real-Time Eye AF. Fängt feine Texturen, Raumstimmungen und Bewegungen in gestochen scharfer Studio-Qualität ein.
+                        </p>
+                    </div>
+
+                    <!-- Real Photo of Sony Camera -->
+                    <div class="relative h-64 overflow-hidden border-t border-white/10">
+                        <img src="assets/images/sony-camera.jpg" alt="Sony Mirrorless Camera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#08090e] via-transparent to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tamron 70-200mm f/2.8 Lens with Real Image -->
+                <div class="md:col-span-5 spotlight-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                    <div class="p-8 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-mono text-indigo-400">Telephoto Prime Glass</span>
+                            <span class="badge-mono text-emerald-400">f/2.8 Konstant</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Tamron 70-200mm f/2.8</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Das legendäre Telezoom mit durchgehender f/2.8 Lichtstärke. Erzeugt das unvergleichlich weiche, filmische Bokeh im Hintergrund und stellt Teammitglieder und Produkte plastisch frei.
+                        </p>
+                    </div>
+
+                    <!-- Real Photo of Telephoto Lens -->
+                    <div class="relative h-64 overflow-hidden border-t border-white/10">
+                        <img src="assets/images/tamron-lens.jpg" alt="Telephoto Lens Glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#08090e] via-transparent to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Adobe Photoshop Color Science -->
+                <div class="md:col-span-6 spotlight-card p-6 rounded-3xl flex items-center gap-6">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                        <i data-lucide="sliders" class="w-7 h-7 text-blue-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white">Adobe Photoshop RAW Grading</h4>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                            Keine Standard-Filter. Jedes Bild wird in Adobe Lightroom und Photoshop individuell farbkorrigiert und auf Ihre Corporate Identity abgestimmt.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: 100% Commercial Rights -->
+                <div class="md:col-span-6 spotlight-card p-6 rounded-3xl flex items-center gap-6">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-emerald-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white">Alle Bildrechte uneingeschränkt inklusive</h4>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                            Sie erhalten alle hochauflösenden Originaldateien zur freien Verwendung für Ihre Website, Social Media (Instagram, TikTok) und Print.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. QUALITÄTS-VERGLEICH (WARUM KUNDEN UNS WÄHLEN) -->
+        <section id="vergleich" class="space-y-8 scroll-mt-28">
+            <div class="text-center space-y-2 max-w-xl mx-auto">
+                <span class="badge-mono text-blue-400">Direkter Vergleich</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Der Unterschied, den man sieht und spürt.
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-400">
+                    Warum Standard-Webdesigner und Baukästen lokale Kunden verlieren.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- 08/15 Standard -->
+                <div class="p-8 rounded-3xl border border-red-500/20 bg-red-950/10 space-y-5">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-mono text-red-400 font-bold">Typischer Baukasten / Billig-Agentur</span>
+                        <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-3 font-mono">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-400">&times;</span>
+                            <span>Kunde muss Fotos selbst mit dem Handy machen oder zahlt für unechte Stockfotos.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-400">&times;</span>
+                            <span>Schwere WordPress-Plugins sorgen für Ladezeiten von 3 bis 5 Sekunden.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-400">&times;</span>
+                            <span>Monatliche Knebelverträge für „Wartung“ ohne Mehrwert.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-400">&times;</span>
+                            <span>Kein lokaler Bezug: Callcenter-Support ohne persönliche Beratung.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- MD DIGITAL Standard -->
+                <div class="p-8 rounded-3xl border border-emerald-500/40 bg-emerald-950/10 space-y-5 shadow-2xl relative overflow-hidden">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-mono text-emerald-400 font-bold">MD Digital Standard</span>
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+                    </div>
+                    <ul class="text-xs text-slate-200 space-y-3 font-mono">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-emerald-400">&check;</span>
+                            <span>Marcel kommt mit der Sony ZV-E10 & Tamron 70-200mm f/2.8 direkt zu Ihnen ins Geschäft.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-emerald-400">&check;</span>
+                            <span>0.4s Ladezeit durch handgeschriebenen, schlanken Code auf Apple M4 Basis.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-emerald-400">&check;</span>
+                            <span>Faire Festpreise. Einmalige Zahlung, die Website gehört zu 100% Ihnen.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-emerald-400">&check;</span>
+                            <span>Wien vor Ort: Wir kommen persönlich vorbei und besprechen alles bei einem Kaffee.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. INTERACTIVE LIVE DEMO SCREEN (MacBook / Studio Display Mockup) -->
         <section id="demos" class="space-y-8 scroll-mt-28">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
                 <div>
                     <span class="badge-mono text-blue-400">Interaktive Showcases</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
-                        Echte Websites. Teste sie jetzt.
+                        Echte Kundenkonzepte. Testen Sie sie live.
                     </h2>
                 </div>
                 
-                <!-- Interactive Tab Pill Switcher -->
                 <div class="glass-pill p-1 rounded-full flex items-center gap-1 self-start md:self-auto">
                     <button id="tab-barber" onclick="switchDemo('barber')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-black transition-all">
-                        Fade & Blade (Barbershop)
+                        Fade & Blade (Barbershop 1010)
                     </button>
                     <button id="tab-tech" onclick="switchDemo('tech')" class="px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all">
-                        PhoneLab (Tech Repair)
+                        PhoneLab (Tech Repair 1070)
                     </button>
                 </div>
             </div>
 
             <!-- Virtual Display Frame -->
-            <div class="tesla-spotlight-card rounded-3xl p-3 sm:p-5 shadow-2xl relative overflow-hidden">
-                <!-- Browser Bar -->
+            <div class="spotlight-card rounded-3xl p-3 sm:p-5 shadow-2xl relative overflow-hidden">
                 <div class="flex items-center justify-between pb-3 px-3 border-b border-white/5 text-xs text-slate-500 font-mono">
                     <div class="flex items-center gap-2">
                         <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
@@ -244,7 +360,7 @@
                     </div>
                     <div id="demo-url" class="px-6 py-1 rounded-full bg-black/40 border border-white/5 text-[11px] text-slate-300 flex items-center gap-1.5">
                         <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
-                        <span>fade-and-blade.at · Wien 1010</span>
+                        <span>fade-and-blade.at · Herrengasse 1010 Wien</span>
                     </div>
                     <a id="demo-external-link" href="demo-barber.html" target="_blank" class="hover:text-white flex items-center gap-1 transition-colors">
                         <span>Vollbild</span>
@@ -252,148 +368,85 @@
                     </a>
                 </div>
 
-                <!-- Iframe Container -->
-                <div class="relative w-full h-[520px] rounded-2xl overflow-hidden mt-3 bg-black border border-white/5">
+                <div class="relative w-full h-[540px] rounded-2xl overflow-hidden mt-3 bg-black border border-white/5">
                     <iframe id="demo-iframe" src="demo-barber.html" class="w-full h-full border-0"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- SONY & TAMRON HARDWARE RIG (Interactive Spec Hotspots) -->
-        <section id="gear" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-white/10 pb-6">
-                <span class="badge-mono text-emerald-400">Produktions-Rig & Kamera</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
-                    Marcels Kamera-Setup. Studio-Qualität vor Ort.
-                </h2>
-                <p class="text-slate-400 text-sm mt-2 max-w-xl">
-                    Kunden kaufen mit den Augen. Wir setzen dein Geschäft, Team und deine Produkte mit Vollformat-Ästhetik in Szene.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                
-                <!-- Spec Card 1 -->
-                <div class="tesla-spotlight-card p-6 rounded-3xl space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-mono text-blue-400">Cinema Body</span>
-                        <i data-lucide="camera" class="w-5 h-5 text-slate-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Sony ZV-E10</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Großer APS-C Sensor mit 4K Oversampling und Real-Time Eye AF. Fängt jede Bewegung knackscharf ein und liefert natürliche Hauttöne.
-                    </p>
-                    <div class="pt-2 border-t border-white/5 space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between text-slate-400"><span>Auflösung:</span> <span class="text-white">4K UHD HDR</span></div>
-                        <div class="flex justify-between text-slate-400"><span>Autofokus:</span> <span class="text-white">425-Punkt Hybrid AF</span></div>
-                    </div>
-                </div>
-
-                <!-- Spec Card 2 -->
-                <div class="tesla-spotlight-card p-6 rounded-3xl space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-mono text-indigo-400">Telephoto Optik</span>
-                        <i data-lucide="aperture" class="w-5 h-5 text-slate-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Tamron 70-200mm f/2.8</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Durchgehende f/2.8 Lichtstärke. Erzeugt das unverwechselbar samtige, kinoreife Bokeh im Hintergrund für Premium-Porträts und Food/Produkt-Close-Ups.
-                    </p>
-                    <div class="pt-2 border-t border-white/5 space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between text-slate-400"><span>Blende:</span> <span class="text-white">Konstant f/2.8</span></div>
-                        <div class="flex justify-between text-slate-400"><span>Bokeh-Faktor:</span> <span class="text-emerald-400">10 / 10 Ultra-Clean</span></div>
-                    </div>
-                </div>
-
-                <!-- Spec Card 3 -->
-                <div class="tesla-spotlight-card p-6 rounded-3xl space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-mono text-cyan-400">Post-Production</span>
-                        <i data-lucide="sliders" class="w-5 h-5 text-slate-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Adobe Photoshop Pro</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Jedes Foto durchläuft Marcels RAW-Grading-Pipeline. Keine billigen Instagram-Filter, sondern professionelle Farb- und Lichtabstimmung.
-                    </p>
-                    <div class="pt-2 border-t border-white/5 space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between text-slate-400"><span>Color Science:</span> <span class="text-white">Adobe Lightroom RAW</span></div>
-                        <div class="flex justify-between text-slate-400"><span>Rechte:</span> <span class="text-white">100% Frei für alle Kanäle</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- TEAM SECTION: DAOUD & MARCEL -->
+        <!-- 5. TEAM: DAOUD & MARCEL -->
         <section id="team" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-white/10 pb-6">
-                <span class="badge-mono text-slate-400">Gründer & Köpfe</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
-                    Direkte Zusammenarbeit. Keine Agentur-Umwege.
-                </h2>
+            <div class="border-b border-white/10 pb-6 flex items-center justify-between">
+                <div>
+                    <span class="badge-mono text-slate-400">Gründer</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+                        Zwei Spezialisten. Keine Zwischenhändler.
+                    </h2>
+                </div>
+                <span class="badge-mono text-emerald-400">Standort Wien</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 
                 <!-- Daoud Sahel -->
-                <div class="tesla-spotlight-card p-8 rounded-3xl space-y-4">
+                <div class="spotlight-card p-8 rounded-3xl space-y-4">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-white text-black font-mono font-bold flex items-center justify-center text-sm">
                             DS
                         </div>
                         <div>
                             <h3 class="text-lg font-bold text-white">Daoud Sahel</h3>
-                            <div class="text-xs font-mono text-blue-400">Lead Web Architecture & Systems</div>
+                            <div class="text-xs font-mono text-blue-400">Lead Web Architecture & Digital Systems</div>
                         </div>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Entwickelt auf Apple Silicon M4 kompromisslos schnelle Web-Architekturen. Fokussiert auf 0.4s Ladezeiten, Mobil-Optimierung, Local SEO Wien und höchste Conversion-Raten.
+                        Entwickelt maßgeschneiderte, ultra-performante Web-Architekturen auf Apple Silicon M4. Garantiert Ladezeiten unter 0.4 Sekunden, modernste UX-Animationen und Top-Platzierungen bei lokalen Google Maps Suchanfragen.
                     </p>
-                    <div class="flex gap-2 pt-2">
+                    <div class="flex flex-wrap gap-2 pt-2">
                         <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Clean Code</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Local SEO 1010-1230</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Fast Deploy</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Local SEO Wien</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Conversion UX</span>
                     </div>
                 </div>
 
                 <!-- Marcel Pasik -->
-                <div class="tesla-spotlight-card p-8 rounded-3xl space-y-4">
+                <div class="spotlight-card p-8 rounded-3xl space-y-4">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-white text-black font-mono font-bold flex items-center justify-center text-sm">
                             MP
                         </div>
                         <div>
                             <h3 class="text-lg font-bold text-white">Marcel Pasik</h3>
-                            <div class="text-xs font-mono text-indigo-400">Director of Photography & Post-Production</div>
+                            <div class="text-xs font-mono text-indigo-400">Director of Photography & Visual Production</div>
                         </div>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Leitet die visuelle Produktion vor Ort in Wien. Führt das Sony 4K & Tamron 70-200mm Setup und verwandelt rohe Kameradaten in Photoshop zu hochglänzenden Marketing-Assets.
+                        Verantwortlich für die visuelle Ästhetik vor Ort in Wien. Führt das Sony 4K & Tamron 70-200mm f/2.8 Setup und verwandelt rohe Kameradaten in Adobe Photoshop in kinoreife Marketing-Fotos für Ihren Betrieb.
                     </p>
-                    <div class="flex gap-2 pt-2">
+                    <div class="flex flex-wrap gap-2 pt-2">
                         <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Sony 4K Production</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Photoshop Master</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Commercial Grading</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Tamron Bokeh Master</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Photoshop Retusche</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- TESLA-STYLE INTERACTIVE COST CONFIGURATOR -->
-        <section id="calculator" class="tesla-spotlight-card rounded-3xl p-8 sm:p-12 space-y-8 scroll-mt-28 border-white/20">
+        <!-- 6. LIVE KOSTEN-KONFIGURATOR (MIT SOFORT-WHATSAPP-ANFRAGE) -->
+        <section id="konfigurator" class="spotlight-card rounded-3xl p-8 sm:p-12 space-y-8 scroll-mt-28 border-white/20">
             <div class="text-center space-y-2 max-w-xl mx-auto">
-                <span class="badge-mono text-emerald-400">Live Kalkulator</span>
+                <span class="badge-mono text-emerald-400">Transparente Festpreise</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                    Konfiguriere dein Projekt.
+                    Konfigurieren Sie Ihr Paket.
                 </h2>
                 <p class="text-xs sm:text-sm text-slate-400">
-                    Transparente Wiener Festpreise. Klicke die Optionen an – die Schätzung berechnet sich in Echtzeit.
+                    Wählen Sie Ihren gewünschten Umfang. Der Preis aktualisiert sich in Echtzeit.
                 </p>
             </div>
 
             <div class="max-w-2xl mx-auto space-y-6">
-                <!-- Option 1: Website Scope -->
+                <!-- Option 1: Scope -->
                 <div class="space-y-2">
                     <label class="badge-mono text-slate-400">1. Website Format</label>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -402,21 +455,21 @@
                                 <span>One-Pager Express</span>
                                 <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1">Kompakt, schnell, perfekt für Barbershops & Stores</div>
+                            <div class="text-xs text-slate-400 mt-1">Kompakt, schnell, ideal für Barbershops, Stores & Cafés</div>
                         </button>
                         <button type="button" onclick="setScope('multi')" id="scope-multi" class="p-4 rounded-2xl glass-pill text-left transition-all border-white/10 hover:border-white/25">
                             <div class="text-sm font-bold text-white flex items-center justify-between">
                                 <span>Multi-Page Business</span>
                                 <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1">Mehrere Unterseiten, Buchungssystem & Katalog</div>
+                            <div class="text-xs text-slate-400 mt-1">Mehrere Unterseiten, Shop-Katalog oder Buchungssystem</div>
                         </button>
                     </div>
                 </div>
 
                 <!-- Option 2: Addons -->
                 <div class="space-y-2">
-                    <label class="badge-mono text-slate-400">2. Zusätzliche Services vor Ort</label>
+                    <label class="badge-mono text-slate-400">2. Vor-Ort Services Wien</label>
                     <div class="space-y-2">
                         <div onclick="toggleAddon('photo')" id="addon-photo" class="p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/40 bg-white/5 transition-all">
                             <div class="flex items-center gap-3">
@@ -434,7 +487,7 @@
                                 <i data-lucide="map-pin" class="w-5 h-5 text-blue-400"></i>
                                 <div>
                                     <div class="text-xs sm:text-sm font-semibold text-white">Google Maps & Local SEO Setup</div>
-                                    <div class="text-[11px] text-slate-400">Optimierung für Wiener Stadtteil-Keywords</div>
+                                    <div class="text-[11px] text-slate-400">Top-Platzierung für Wiener Suchbegriffe in Ihrem Bezirk</div>
                                 </div>
                             </div>
                             <span class="badge-mono text-blue-400 font-bold">+180 €</span>
@@ -451,8 +504,48 @@
                     </div>
                     <a id="whatsapp-quote-btn" href="#" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white text-black hover:bg-slate-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xl">
                         <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        <span>Paket via WhatsApp senden</span>
+                        <span>Paket via WhatsApp anfragen</span>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ ACCORDION -->
+        <section class="space-y-6 max-w-3xl mx-auto">
+            <div class="text-center space-y-1">
+                <span class="badge-mono text-slate-500">Häufige Fragen</span>
+                <h3 class="text-2xl font-bold text-white">Alles, was Sie wissen müssen.</h3>
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm">
+                <div class="spotlight-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-white flex items-center justify-between">
+                        <span>Wie lange dauert die Fertigstellung der Website?</span>
+                        <i data-lucide="clock" class="w-4 h-4 text-slate-500"></i>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        In der Regel ist Ihre Website innerhalb von 5 bis 7 Werktagen komplett einsatzbereit. Das Foto-Shooting findet nach Absprache meist in den ersten 48 Stunden statt.
+                    </p>
+                </div>
+
+                <div class="spotlight-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-white flex items-center justify-between">
+                        <span>Gehören die Fotos danach wirklich zu 100% mir?</span>
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Ja, absolut! Sie erhalten alle bearbeiteten hochauflösenden Bilddateien zur freien, uneingeschränkten Nutzung für Ihre Website, Social Media (Instagram, TikTok) und Printwerbung.
+                    </p>
+                </div>
+
+                <div class="spotlight-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-white flex items-center justify-between">
+                        <span>Gibt es versteckte monatliche Gebühren?</span>
+                        <i data-lucide="shield" class="w-4 h-4 text-blue-400"></i>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Nein. Wir arbeiten mit transparenten Festpreisen. Die Domain und das Hosting kosten Sie bei Standard-Anbietern lediglich ca. 2 bis 5 Euro pro Monat – ohne Agenturaufschlag.
+                    </p>
                 </div>
             </div>
         </section>
@@ -465,18 +558,18 @@
             <span class="text-white font-bold">MD DIGITAL WIEN</span> — Daoud Sahel & Marcel Pasik
         </div>
         <div class="flex items-center gap-6">
-            <span>M4 Apple Architecture</span>
+            <span>Sony 4K & Apple Silicon Architecture</span>
             <a href="https://wa.me/" class="hover:text-white transition-colors">WhatsApp</a>
             <a href="tel:+43" class="hover:text-white transition-colors">Telefon</a>
         </div>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+    <!-- INTERACTIVE ENGINE -->
     <script>
         lucide.createIcons();
 
-        // 1. Mouse Spotlight Tracker (Aceternity UI effect)
-        document.querySelectorAll('.tesla-spotlight-card').forEach(card => {
+        // Spotlight Mouse Effect
+        document.querySelectorAll('.spotlight-card').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -486,7 +579,7 @@
             });
         });
 
-        // 2. Demo Switcher
+        // Demo Switcher
         function switchDemo(type) {
             const iframe = document.getElementById('demo-iframe');
             const urlBadge = document.getElementById('demo-url');
@@ -496,13 +589,13 @@
 
             if (type === 'barber') {
                 iframe.src = 'demo-barber.html';
-                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i><span>fade-and-blade.at · Wien 1010</span>';
+                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i><span>fade-and-blade.at · Herrengasse 1010 Wien</span>';
                 externalLink.href = 'demo-barber.html';
                 tabBtnBarber.className = 'px-4 py-2 rounded-full text-xs font-semibold bg-white text-black transition-all';
                 tabBtnTech.className = 'px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all';
             } else {
                 iframe.src = 'demo-tech.html';
-                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i><span>phonelab-wien.at · Wien 1070</span>';
+                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i><span>phonelab-wien.at · Neubaugasse 1070 Wien</span>';
                 externalLink.href = 'demo-tech.html';
                 tabBtnTech.className = 'px-4 py-2 rounded-full text-xs font-semibold bg-white text-black transition-all';
                 tabBtnBarber.className = 'px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all';
@@ -510,7 +603,7 @@
             lucide.createIcons();
         }
 
-        // 3. Interactive Pricing & WhatsApp Link Generator
+        // Pricing Engine
         let currentScope = 'single';
         let hasPhoto = true;
         let hasSeo = true;
