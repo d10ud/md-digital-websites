@@ -1,33 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <linearGradient id="mdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Deep Obsidian to Titanium Gradient -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1d1d1f" />
-      <stop offset="100%" stop-color="#0a0a0c" />
+      <stop offset="50%" stop-color="#121316" />
+      <stop offset="100%" stop-color="#0a0a0d" />
     </linearGradient>
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+
+    <!-- Apple Electric Cobalt Blue Gradient -->
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0071e3" />
       <stop offset="100%" stop-color="#42a5f5" />
     </linearGradient>
-    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.12" />
+
+    <!-- Soft Drop Shadow for Depth -->
+    <filter id="appleShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.14" />
     </filter>
   </defs>
 
-  <!-- Background Squircle / Apple App Icon container -->
-  <rect x="32" y="32" width="448" height="448" rx="112" fill="#ffffff" stroke="rgba(0,0,0,0.06)" stroke-width="4" filter="url(#subtleShadow)" />
+  <!-- Background Apple Squircle Container -->
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="#ffffff" stroke="rgba(0,0,0,0.06)" stroke-width="4" filter="url(#appleShadow)" />
 
-  <!-- Iconic Monogram M & D -->
-  <!-- Left Pillar of M -->
-  <path d="M 128 360 L 128 160 C 128 148 138 140 150 140 L 176 140 C 186 140 195 146 199 155 L 256 268 L 313 155 C 317 146 326 140 336 140 L 340 140 C 352 140 362 148 362 160 L 362 208" 
-        fill="none" stroke="url(#mdGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Geometric Monogram M & D -->
+  <g transform="translate(48, 48)">
+    <!-- Pillar 1 of M (Left) -->
+    <path d="M 64 300 L 64 120 C 64 104 76 92 92 92 L 108 92 C 120 92 132 100 138 112 L 192 208 L 246 112 C 252 100 264 92 276 92 L 292 92 C 308 92 320 104 320 120 L 320 160" 
+          fill="none" stroke="url(#bodyGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- Flowing D Curve enclosing the right side -->
-  <path d="M 256 268 L 298 348 C 303 358 313 364 324 364 L 336 364 C 378 364 408 330 408 284 C 408 238 376 208 336 208 L 296 208" 
-        fill="none" stroke="url(#mdGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Flowing Loop of D (Right) -->
+    <path d="M 192 208 L 236 288 C 242 298 253 304 266 304 L 284 304 C 334 304 368 266 368 214 C 368 162 334 124 284 124 L 240 124" 
+          fill="none" stroke="url(#bodyGrad)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- Bottom Connector of M -->
-  <path d="M 128 360 L 196 360" fill="none" stroke="url(#mdGrad)" stroke-width="36" stroke-linecap="round" />
+    <!-- Bottom Base Anchor of M -->
+    <path d="M 64 300 L 140 300" fill="none" stroke="url(#bodyGrad)" stroke-width="36" stroke-linecap="round" />
 
-  <!-- The Optical Focal Point: Camera Lens Aperture / Digital Precision Core -->
-  <circle cx="346" cy="286" r="14" fill="url(#accentGrad)" />
+    <!-- Shutter Optical Aperture Core (Camera Sensor & Code Precision) -->
+    <circle cx="286" cy="214" r="16" fill="url(#blueGlow)" />
+  </g>
 </svg>

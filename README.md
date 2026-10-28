@@ -1,64 +1,95 @@
-# MD Digital — High-End Web & Media Agency Wien
-
-**MD Digital** ist das gemeinsame digitale Studio von **Daoud Sahel** (Web Development & Architecture) und **Marcel Pasik** (Director of Photography & Media).
+<div align="center">
+  <img src="assets/brand/logo-mark.svg" width="96" height="96" alt="MD DIGITAL Logo" style="border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
+  <h1>MD DIGITAL · WIEN</h1>
+  <p><strong>High-End Web Architecture & 4K Cinema Photography für Wiener Betriebe</strong></p>
+  <p>
+    <a href="https://d10ud.github.io/md-digital-websites/"><img src="https://img.shields.io/badge/Live_Showcase-GitHub_Pages-0071e3?style=for-the-badge&logo=github" alt="Live Demo"></a>
+    <a href="https://wa.me/436765878022"><img src="https://img.shields.io/badge/WhatsApp-+43_676_5878022-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
+    <a href="tel:+436765878022"><img src="https://img.shields.io/badge/Telefon-+43_676_5878022-1d1d1f?style=for-the-badge" alt="Telefon"></a>
+  </p>
+</div>
 
 ---
 
-## 🚀 Sofort lokal ansehen
+## 🏛️ Über MD DIGITAL
 
-Öffne einfach das Terminal auf deinem MacBook Air M4 und führe aus:
+**MD DIGITAL** ist ein unabhängiges studentisches Studio aus Wien. Gegründet von **Daoud Sahel** (Software-Entwicklung & Web-Architektur) und **Marcel Pasik** (Medienproduktion & Fotografie). 
 
-```bash
-open /Users/daoud/md-digital/index.html
+Wir verbinden kompromisslos schnellen, handgeschriebenen Web-Code mit echter 4K-Kameraoptik vor Ort &mdash; ohne teuren Agentur-Wasserkopf, zu transparenten und fairen Konditionen für Wiener Klein- und Meisterbetriebe.
+
+### 👥 Das Gründer-Team
+* **Daoud Sahel** &mdash; *Lead Web Architecture & Performance*: Entwickelt auf Apple Silicon M4 blitzschnelle Websites (< 0.4s Ladezeit, 100/100 Google Lighthouse) ohne anfällige Plugins oder WordPress-Bloatware.
+* **Marcel Pasik** &mdash; *Director of Photography & Media*: Schießt mit Sony Cinema Mirrorless 4K und Tamron 70-200mm f/2.8 SP Di VC USD G2 Teleobjektiv gestochen scharfe, authentische Porträts und Ladenaufnahmen direkt vor Ort in Wien.
+
+---
+
+## 💶 Transparente Studenten-Festpreise
+
+| Leistung | Beschreibung | Festpreis |
+| :--- | :--- | :--- |
+| **One-Pager Express Website** | Kompakter, moderner Webauftritt auf Apple-Designstandard, mobiloptimiert, SSL, 0.4s Ladezeit | **399 €** |
+| **Multi-Page Business Website** | Ausführliche Unternehmenspräsenz mit Unterseiten, Menü/Katalog, Buchungsmodulen & FAQ | **599 €** |
+| **4K Vor-Ort Foto-Shooting mit Marcel** | Sony ZV-E10 + Tamron 70-200mm f/2.8 Aufnahmen Ihres Teams & Geschäfts in Wien inkl. Photoshop RAW-Retusche | **+100 €** |
+| **Google Maps & Local SEO Setup** | Optimierung für Google Search & Maps für Ihren Wiener Bezirk (1010, 1070 etc.) | **+99 €** |
+
+*Keine monatlichen Knebelverträge. Sie besitzen 100% aller Rechte an Code und Fotos.*
+
+---
+
+## 📸 Kamera-Setup & Hardware Rig
+
+```
+Camera Body : Sony ZV-E10 (4K Mirrorless Cinema APS-C, High Dynamic Range)
+Lens        : Tamron SP 70-200mm f/2.8 Di VC USD G2 (Cremiges Bokeh, Freistellung)
+Development : Apple Silicon M4 Architecture (Metal GPU Accelerated)
+Post-Prod   : Adobe Photoshop & Lightroom (RAW Color Science & Denoise)
 ```
 
-Oder mache einen Doppelklick auf die `index.html` im Finder.
-
 ---
 
-## 📁 Projekt-Übersicht
+## 📂 Repository-Struktur
 
-- **`index.html`**: Eure Haupt-Website im Dark & Tech-Look (Apple/Vercel Aesthetic).
-  - Interaktiver Projekt-Konfigurator mit Sofort-Kostenschätzung.
-  - Ausführlicher Showcase von Marcels Kamera-Rig (Sony ZV-E10, Tamron 70-200mm f/2.8, Adobe CC) und Daouds Tech-Architektur (Apple M4).
-  - Direkte WhatsApp-, Telefon- und Mail-CTA Buttons.
-- **`demo-barber.html`**: Voll funktionsfähige Live-Demo für Barbershops & Friseure (z. B. 1010 Wien).
-  - Menü & Preisliste, Buchungs-Modal, Öffnungszeiten, stilvolles Black/Gold-Design.
-- **`demo-tech.html`**: Voll funktionsfähige Live-Demo für Smartphone- & Tech-Reparaturstores (z. B. 1070 Wien).
-  - Interaktiver Live-Reparaturkostenrechner für iPhone & Samsung, Express-Garantie Badges.
-
----
-
-## 🌐 Auf GitHub hochladen & kostenlos online stellen
-
-### 1. Git Repository initialisieren
-
-```bash
-cd /Users/daoud/md-digital
-git init
-git add .
-git commit -m "Initial launch: MD Digital Agency & Live Demos"
+```
+.
+├── index.html                  # Master-Website (Apple Light Aesthetic, Before/After Slider, Rechner)
+├── demo-barber.html            # Interaktives Live-Showcase für Barbershops & Salons (1010 Wien)
+├── demo-tech.html              # Interaktives Live-Showcase für Tech Stores & Reparaturen (1070 Wien)
+├── impressum.html              # Rechtssicheres Impressum (§ 5 ECG, § 25 Mediengesetz) & DSGVO
+├── favicon.svg                 # Vektor Browser-Icon
+└── assets/
+    ├── brand/
+    │   ├── logo-mark.svg       # M&D Monogramm Vektor-Branding
+    │   ├── md-logo.svg         # Alternatives Vektor-Icon
+    │   ├── logo-horizontal.svg # Horizontales Wortmarken-Logo
+    │   └── studio-logo-mockup.jpg # 3D Titan & Saphirglas Studio-Render
+    └── images/                 # Verifizierte hochauflösende Fotografien
+        ├── barber-fade.jpg     # 4K Friseur-Detailfoto
+        ├── barber-tools.jpg    # Handwerks-Ausrüstung
+        ├── camera-macro.jpg    # Tamron 70-200mm f/2.8 Blende & Optik
+        ├── restaurant-gourmet.jpg # Wiener Gastronomie-Ambiente
+        ├── sony-camera.jpg     # Sony ZV-E10 Gehäuse
+        ├── tamron-lens.jpg     # Tele-Zoom Objektiv
+        ├── tech-repair.jpg     # Smartphone-Werkbank & Mikroskop
+        └── vienna-night.jpg    # Wien Architektur
 ```
 
-### 2. Auf GitHub pushen
+---
 
-1. Gehe auf [GitHub](https://github.com/new) und erstelle ein neues Repository namens `md-digital`.
-2. Verbinde es mit deinem Terminal:
-```bash
-git remote add origin https://github.com/DEIN-GITHUB-NUTZERNAME/md-digital.git
-git branch -M main
-git push -u origin main
-```
+## 🚀 Live Vorschau & Hosting
 
-### 3. Kostenlos hosten
-
-* **Option A (GitHub Pages):** In deinem GitHub Repo auf `Settings -> Pages` gehen und `main branch / root` auswählen. Innerhalb von 60 Sekunden ist eure Seite live unter `https://dein-name.github.io/md-digital`.
-* **Option B (Vercel - Empfohlen für Custom Domain):** Gehe auf [vercel.com](https://vercel.com), verknüpfe dein GitHub-Repo – Vercel deployt es automatisch mit weltweit schnellstem CDN und SSL. Dort könnt ihr z. B. `md-digital.at` hinterlegen.
+* **Online URL**: [https://d10ud.github.io/md-digital-websites/](https://d10ud.github.io/md-digital-websites/)
+* **Lokal auf macOS öffnen**:
+  ```bash
+  open /Users/daoud/Desktop/MD-Digital-Websites/index.html
+  ```
 
 ---
 
-## 🎯 Der Pitch für Kunden in Wien (Friseure, Handyläden, Cafés)
+## 📞 Kontakt & Impressum
 
-Wenn ihr in Wien unterwegs seid oder Läden kontaktiert:
+* **Telefon / WhatsApp**: [+43 676 5878022](https://wa.me/436765878022)
+* **E-Mail**: [mddigital.at@gmail.com](mailto:mddigital.at@gmail.com)
+* **Standort**: Wien, Österreich
+* **Rechtliches**: Siehe [impressum.html](https://d10ud.github.io/md-digital-websites/impressum.html)
 
-> *"Grüß dich! Wir sind Daoud und Marcel von MD Digital aus Wien. Wir haben gesehen, dass viele Läden hier im Bezirk entweder gar keine Website haben oder veraltete Seiten mit schlechten Bildern. Wir bauen euch eine moderne Website, und Marcel kommt mit unserer Sony ZV-E10 4K-Kamera direkt zu euch in den Laden und fotografiert euer Team, eure Produkte und die Atmosphäre. Schaut euch gerne mal auf eurem Handy unsere Live-Demos an!"*
+&copy; 2026 MD DIGITAL · Daoud Sahel & Marcel Pasik
