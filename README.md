@@ -23,16 +23,26 @@ Wir verbinden kompromisslos schnellen, handgeschriebenen Web-Code mit echter 4K-
 
 ---
 
-## 💶 Transparente Studenten-Festpreise
+## 💶 Transparente Studenten-Festpreise & Modulare Optionen
 
+### 🌐 Basis-Webpakete
 | Leistung | Beschreibung | Festpreis |
 | :--- | :--- | :--- |
 | **One-Pager Express Website** | Kompakter, moderner Webauftritt auf Apple-Designstandard, mobiloptimiert, SSL, 0.4s Ladezeit | **399 €** |
 | **Multi-Page Business Website** | Ausführliche Unternehmenspräsenz mit Unterseiten, Menü/Katalog, Buchungsmodulen & FAQ | **599 €** |
-| **4K Vor-Ort Foto-Shooting mit Marcel** | Sony ZV-E10 + Tamron 70-200mm f/2.8 Aufnahmen Ihres Teams & Geschäfts in Wien inkl. Photoshop RAW-Retusche | **+100 €** |
-| **Google Maps & Local SEO Setup** | Optimierung für Google Search & Maps für Ihren Wiener Bezirk (1010, 1070 etc.) | **+99 €** |
 
-*Keine monatlichen Knebelverträge. Sie besitzen 100% aller Rechte an Code und Fotos.*
+### ⚡ Optionale Zusatz-Module (Frei kombinierbar)
+| Extra-Option | Beschreibung | Festpreis |
+| :--- | :--- | :--- |
+| **4K Vor-Ort Foto-Shooting mit Marcel** | Sony ZV-E10 + Tamron 70-200mm f/2.8 Aufnahmen Ihres Teams & Geschäfts in Wien inkl. Photoshop RAW-Retusche | **+100 €** |
+| **Google Unternehmensprofil & Maps Eintrag** | Komplette Einrichtung, Standort-Verifikation, Öffnungszeiten, 4K-Fotos & Google-Bewertungslink | **+79 €** |
+| **Google Maps & Local SEO Ranking** | Top-Platzierung für Wiener Suchbegriffe in Ihrem Bezirk (1010, 1070 etc.) & Schema.org LocalBusiness Tags | **+99 €** |
+| **Wunsch-Domain (.at) & Business-Mail Setup** | Registrierung Ihrer `.at` Domain, DNS, SSL & `office@deinladen.at` auf Mac/iPhone eingerichtet | **+49 €** |
+| **Social Media Starter Kit (Instagram & TikTok)** | 5 maßgeschneiderte Post- & Story-Templates im abgestimmten Design mit euren 4K-Fotos | **+69 €** |
+| **QR-Code Tischaufsteller & 5★ Bewertungskarte** | Vektorisierter QR-Code für Speisekarte/Services + Vorlage für Smartphone-Kundenbewertungen | **+39 €** |
+| **Zweisprachigkeit DE / EN** | Vollständige Übersetzung & Sprachumschalter für Touristen & internationale Kunden in Wien | **+89 €** |
+
+*Keine monatlichen Knebelverträge. Sie besitzen 100% aller Rechte an Code, Domain und Fotos.*
 
 ---
 

@@ -688,30 +688,116 @@
                     </div>
                 </div>
 
-                <!-- Option 2: Addons -->
-                <div class="space-y-2">
-                    <label class="badge-mono text-[#86868b]">2. Vor-Ort Services Wien (Optional)</label>
-                    <div class="space-y-2">
-                        <div onclick="toggleAddon('photo')" id="addon-photo" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-70 flex items-center justify-between cursor-pointer transition-all">
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="camera" class="w-5 h-5 text-[#0071e3]"></i>
+                <!-- Option 2: Addons & Upgrades -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <label class="badge-mono text-[#86868b]">2. Optionale Zusatz-Leistungen (Wien &amp; Digital)</label>
+                        <span class="text-[11px] font-mono text-[#0071e3]">Klick zum Auswählen</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-2.5">
+                        <!-- 1. 4K Shooting -->
+                        <div onclick="toggleAddon('photo')" id="addon-photo" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="camera" class="w-5 h-5 text-[#0071e3]"></i>
+                                </div>
                                 <div>
-                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">4K Vor-Ort Foto-Shooting mit Marcel</div>
-                                    <div class="text-[11px] text-[#86868b]">Sony ZV-E10 + Tamron 70-200mm f/2.8 Aufnahmen &amp; Photoshop Retusche</div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f] flex items-center gap-2">
+                                        <span>4K Vor-Ort Foto-Shooting mit Marcel</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-blue-100/70 text-[10px] font-mono font-bold text-[#0071e3]">Beliebt</span>
+                                    </div>
+                                    <div class="text-[11px] text-[#86868b]">Sony ZV-E10 + Tamron 70-200mm f/2.8 Aufnahmen &amp; Photoshop RAW-Retusche</div>
                                 </div>
                             </div>
-                            <span class="badge-mono text-[#0071e3] font-bold">+100 €</span>
+                            <span class="badge-mono text-[#0071e3] font-bold text-xs shrink-0">+100 €</span>
                         </div>
 
-                        <div onclick="toggleAddon('seo')" id="addon-seo" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-70 flex items-center justify-between cursor-pointer transition-all">
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-emerald-600"></i>
+                        <!-- 2. Google Business Profile -->
+                        <div onclick="toggleAddon('gmb')" id="addon-gmb" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-emerald-600"></i>
+                                </div>
                                 <div>
-                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">Google Maps &amp; Local SEO Setup</div>
-                                    <div class="text-[11px] text-[#86868b]">Top-Platzierung für Wiener Suchbegriffe in Ihrem Bezirk</div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f] flex items-center gap-2">
+                                        <span>Google Unternehmensprofil &amp; Maps Eintrag</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-emerald-100/70 text-[10px] font-mono font-bold text-emerald-700">Wichtig</span>
+                                    </div>
+                                    <div class="text-[11px] text-[#86868b]">Komplette Einrichtung, Standort-Verifikation, Öffnungszeiten, 4K-Fotos &amp; Rezensions-Link</div>
                                 </div>
                             </div>
-                            <span class="badge-mono text-emerald-600 font-bold">+99 €</span>
+                            <span class="badge-mono text-emerald-600 font-bold text-xs shrink-0">+79 €</span>
+                        </div>
+
+                        <!-- 3. Local SEO -->
+                        <div onclick="toggleAddon('seo')" id="addon-seo" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="search" class="w-5 h-5 text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">Google Maps &amp; Local SEO Ranking</div>
+                                    <div class="text-[11px] text-[#86868b]">Top-Platzierung für Wiener Suchbegriffe in Ihrem Bezirk (1010, 1070 etc.) &amp; Schema-Tags</div>
+                                </div>
+                            </div>
+                            <span class="badge-mono text-purple-600 font-bold text-xs shrink-0">+99 €</span>
+                        </div>
+
+                        <!-- 4. Domain & Business Mail -->
+                        <div onclick="toggleAddon('domain')" id="addon-domain" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5 text-amber-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">Wunsch-Domain (.at) &amp; Business-Mail Setup</div>
+                                    <div class="text-[11px] text-[#86868b]">Registrierung Ihrer .at Domain, DNS, SSL &amp; office@deinladen.at auf Mac/iPhone eingerichtet</div>
+                                </div>
+                            </div>
+                            <span class="badge-mono text-amber-600 font-bold text-xs shrink-0">+49 €</span>
+                        </div>
+
+                        <!-- 5. Social Media Starter Kit -->
+                        <div onclick="toggleAddon('social')" id="addon-social" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="instagram" class="w-5 h-5 text-rose-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">Social Media Starter Kit (Instagram &amp; TikTok)</div>
+                                    <div class="text-[11px] text-[#86868b]">5 maßgeschneiderte Post- &amp; Story-Templates im einheitlichen Design mit euren 4K-Fotos</div>
+                                </div>
+                            </div>
+                            <span class="badge-mono text-rose-600 font-bold text-xs shrink-0">+69 €</span>
+                        </div>
+
+                        <!-- 6. QR-Code Aufsteller -->
+                        <div onclick="toggleAddon('qr')" id="addon-qr" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="qr-code" class="w-5 h-5 text-cyan-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">QR-Code Tischaufsteller &amp; Google 5★ Bewertungskarte</div>
+                                    <div class="text-[11px] text-[#86868b]">Vektorisierter QR-Code für Speisekarte/Services + Vorlage für Smartphone-Kundenbewertungen</div>
+                                </div>
+                            </div>
+                            <span class="badge-mono text-cyan-600 font-bold text-xs shrink-0">+39 €</span>
+                        </div>
+
+                        <!-- 7. Zweisprachigkeit DE/EN -->
+                        <div onclick="toggleAddon('lang')" id="addon-lang" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="globe" class="w-5 h-5 text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">Zweisprachigkeit DE / EN (Touristen &amp; Expats)</div>
+                                    <div class="text-[11px] text-[#86868b]">Vollständige Übersetzung &amp; Sprachumschalter, perfekt für Wiener Innenstadt &amp; Gastro</div>
+                                </div>
+                            </div>
+                            <span class="badge-mono text-indigo-600 font-bold text-xs shrink-0">+89 €</span>
                         </div>
                     </div>
                 </div>
@@ -723,9 +809,9 @@
                         <div class="text-4xl font-black text-[#1d1d1f] font-mono mt-1" id="total-price">399 €</div>
                         <div class="text-[11px] text-[#86868b] mt-1">Einmalige Investition &bull; Keine monatlichen Knebelverträge &bull; 100% Ihre Website</div>
                     </div>
-                    <button onclick="triggerWhatsAppQuote()" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-md">
+                    <button onclick="triggerWhatsAppQuote()" id="calc-cta-btn" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-md">
                         <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        <span>Website für 399 € anfragen</span>
+                        <span id="calc-cta-text">Website für 399 € anfragen</span>
                     </button>
                 </div>
             </div>
@@ -766,6 +852,16 @@
                     </div>
                     <p class="text-[#86868b] leading-relaxed">
                         Weil wir als Studenten direkt und ohne teure Büro-Mieten oder Projektmanager-Wasserköpfe arbeiten. Wir investieren echtes Herzblut, modernste M4-Technik und unsere Sony 4K-Ausrüstung, um die besten Referenzen in Wien aufzubauen &mdash; und Sie profitieren von unschlagbaren Festpreisen ab 399 €.
+                    </p>
+                </div>
+
+                <div class="apple-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-[#1d1d1f] flex items-center justify-between">
+                        <span>Kann ich Extras wie das Google-Profil oder Foto-Shooting auch nachträglich buchen?</span>
+                        <i data-lucide="plus-circle" class="w-4 h-4 text-[#0071e3]"></i>
+                    </div>
+                    <p class="text-[#86868b] leading-relaxed">
+                        Ja, absolut! Unser Angebot ist 100% modular. Sie können jederzeit mit dem 399 € One-Pager starten und später Optionen wie das Google Unternehmensprofil, Local SEO, Marcel für ein Vor-Ort Foto-Shooting oder das Social Media Kit flexibel dazubuchen.
                     </p>
                 </div>
             </div>
@@ -911,24 +1007,59 @@
             recalc();
         }
 
+        const addonPrices = {
+            photo: 100,
+            gmb: 79,
+            seo: 99,
+            domain: 49,
+            social: 69,
+            qr: 39,
+            lang: 89
+        };
+
+        const addonLabels = {
+            photo: '4K Vor-Ort Foto-Shooting mit Marcel (+100 €)',
+            gmb: 'Google Unternehmensprofil & Maps Eintrag (+79 €)',
+            seo: 'Google Maps & Local SEO Ranking (+99 €)',
+            domain: 'Wunsch-Domain (.at) & Business-Mail Setup (+49 €)',
+            social: 'Social Media Starter Kit (Instagram & TikTok) (+69 €)',
+            qr: 'QR-Code Tischaufsteller & Google 5★ Bewertungskarte (+39 €)',
+            lang: 'Zweisprachigkeit DE / EN (+89 €)'
+        };
+
+        const activeAddons = {
+            photo: false,
+            gmb: false,
+            seo: false,
+            domain: false,
+            social: false,
+            qr: false,
+            lang: false
+        };
+
         function toggleAddon(type) {
-            if (type === 'photo') {
-                hasPhoto = !hasPhoto;
-                const el = document.getElementById('addon-photo');
-                el.className = hasPhoto ? 'p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] flex items-center justify-between cursor-pointer transition-all' : 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-60 flex items-center justify-between cursor-pointer transition-all';
-            } else if (type === 'seo') {
-                hasSeo = !hasSeo;
-                const el = document.getElementById('addon-seo');
-                el.className = hasSeo ? 'p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] flex items-center justify-between cursor-pointer transition-all' : 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-60 flex items-center justify-between cursor-pointer transition-all';
+            activeAddons[type] = !activeAddons[type];
+            const el = document.getElementById('addon-' + type);
+            if (el) {
+                if (activeAddons[type]) {
+                    el.className = 'p-4 rounded-2xl bg-white border-2 border-[#0071e3] shadow-md flex items-center justify-between cursor-pointer transition-all scale-[1.01]';
+                } else {
+                    el.className = 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-75 flex items-center justify-between cursor-pointer transition-all hover:opacity-100';
+                }
             }
             recalc();
         }
 
         function recalc() {
             let total = (currentScope === 'single') ? 399 : 599;
-            if (hasPhoto) total += 100;
-            if (hasSeo) total += 99;
+            for (const [key, active] of Object.entries(activeAddons)) {
+                if (active) total += addonPrices[key];
+            }
             document.getElementById('total-price').innerText = total + ' €';
+            const ctaText = document.getElementById('calc-cta-text');
+            if (ctaText) {
+                ctaText.innerText = `Paket für ${total} € anfragen`;
+            }
         }
 
         function showToast(msg) {
@@ -940,13 +1071,22 @@
 
         function triggerWhatsAppQuote() {
             let total = (currentScope === 'single') ? 399 : 599;
-            if (hasPhoto) total += 100;
-            if (hasSeo) total += 99;
-
             const scopeText = currentScope === 'single' ? 'One-Pager Express Website (399 €)' : 'Multi-Page Business Website (599 €)';
-            const photoText = hasPhoto ? '+ 4K Vor-Ort Foto-Shooting mit Marcel (100 €)' : '';
-            const seoText = hasSeo ? '+ Google Maps & Local SEO Setup (99 €)' : '';
-            const msg = `Hallo Daoud & Marcel! Ich habe auf eurer MD Digital Website folgendes Paket konfiguriert: ${scopeText} ${photoText} ${seoText} (Gesamt: ${total} €). Ich möchte ein unverbindliches Kennenlernen in Wien vereinbaren!`;
+            
+            const selectedList = [];
+            for (const [key, active] of Object.entries(activeAddons)) {
+                if (active) {
+                    total += addonPrices[key];
+                    selectedList.push(addonLabels[key]);
+                }
+            }
+
+            let extrasText = '';
+            if (selectedList.length > 0) {
+                extrasText = '\n\nGewählte Extras:\n• ' + selectedList.join('\n• ');
+            }
+
+            const msg = `Hallo Daoud & Marcel! Ich habe auf eurer MD Digital Website folgendes Paket konfiguriert:\n\n• ${scopeText}${extrasText}\n\n👉 Kalkulierter Festpreis: ${total} €\n\nIch möchte gerne ein unverbindliches Kennenlernen in Wien vereinbaren!`;
 
             showToast("WhatsApp Anfrage geöffnet!");
             window.open(`https://wa.me/436765878022?text=${encodeURIComponent(msg)}`, '_blank');
