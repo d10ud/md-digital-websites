@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth bg-[#030305] text-slate-100 antialiased selection:bg-white selection:text-black">
+<html lang="de" class="scroll-smooth bg-[#f5f5f7] text-[#1d1d1f] antialiased selection:bg-[#0071e3] selection:text-white">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +25,20 @@
                         mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
-                        brand: {
-                            gold: '#e5c07b',
-                            blue: '#3b82f6',
-                            emerald: '#10b981',
+                        apple: {
+                            bg: '#f5f5f7',
+                            card: '#ffffff',
+                            text: '#1d1d1f',
+                            subtext: '#86868b',
+                            blue: '#0071e3',
+                            blueHover: '#0077ed',
+                            border: 'rgba(0, 0, 0, 0.08)',
+                            pill: '#e8e8ed',
                         }
+                    },
+                    boxShadow: {
+                        'apple': '0 4px 24px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03)',
+                        'apple-lg': '0 20px 40px -15px rgba(0, 0, 0, 0.08)',
                     }
                 }
             }
@@ -37,36 +46,28 @@
     </script>
 
     <style>
-        :root {
-            --mouse-x: 50%;
-            --mouse-y: 50%;
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
         }
 
-        /* Tesla / Linear Precision Spotlight Card */
-        .spotlight-card {
-            position: relative;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.05), transparent 40%),
-                        #08090e;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: border-color 0.3s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .spotlight-card:hover {
-            border-color: rgba(255, 255, 255, 0.22);
-        }
-
-        .tesla-grid {
-            background-size: 60px 60px;
-            background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        }
-
-        .glass-pill {
-            background: rgba(13, 15, 22, 0.75);
+        .apple-glass {
+            background: rgba(255, 255, 255, 0.82);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .apple-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .apple-card:hover {
+            box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.09);
+            border-color: rgba(0, 0, 0, 0.12);
         }
 
         .badge-mono {
@@ -76,184 +77,189 @@
             text-transform: uppercase;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 5px; height: 5px; }
-        ::-webkit-scrollbar-track { background: #030305; }
-        ::-webkit-scrollbar-thumb { background: #1f2438; border-radius: 999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+        /* Subtle Apple Gradient Headline */
+        .text-apple-gradient {
+            background: linear-gradient(180deg, #1d1d1f 0%, #434344 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f5f5f7; }
+        ::-webkit-scrollbar-thumb { background: #d2d2d7; border-radius: 999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #86868b; }
     </style>
 </head>
-<body class="tesla-grid min-h-screen">
+<body class="min-h-screen">
 
-    <!-- Ambient Glow Top -->
-    <div class="fixed top-[-15%] left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-blue-600/10 via-indigo-600/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
-
-    <!-- TESLA FLOATING PILL NAVBAR -->
-    <div class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-        <header class="glass-pill rounded-full px-5 py-2.5 flex items-center justify-between gap-8 max-w-4xl w-full shadow-2xl transition-all">
-            <!-- Logo -->
+    <!-- FLOATING APPLE GLASS NAVBAR -->
+    <div class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
+        <header class="apple-glass rounded-full px-6 py-3 flex items-center justify-between gap-8 max-w-4xl w-full shadow-apple transition-all">
+            <!-- Brand -->
             <a href="#" class="flex items-center gap-2.5 group">
-                <div class="w-7 h-7 rounded-full bg-white text-black font-extrabold flex items-center justify-center text-xs tracking-tighter group-hover:scale-105 transition-transform">
+                <div class="w-7 h-7 rounded-full bg-[#1d1d1f] text-white font-extrabold flex items-center justify-center text-xs tracking-tighter group-hover:scale-105 transition-transform">
                     MD
                 </div>
-                <span class="font-bold text-sm tracking-tight text-white flex items-center gap-1.5">
+                <span class="font-bold text-sm tracking-tight text-[#1d1d1f] flex items-center gap-1.5">
                     MD DIGITAL
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 </span>
             </a>
 
-            <!-- Links -->
-            <nav class="hidden md:flex items-center gap-7 text-xs font-medium text-slate-400">
-                <a href="#demos" class="hover:text-white transition-colors">Showcases</a>
-                <a href="#camera-gear" class="hover:text-white transition-colors">Sony 4K Gear</a>
-                <a href="#vergleich" class="hover:text-white transition-colors">Qualitäts-Vergleich</a>
-                <a href="#team" class="hover:text-white transition-colors">Über Uns</a>
-                <a href="#konfigurator" class="hover:text-white transition-colors">Preise & Paket</a>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-[#86868b]">
+                <a href="#demos" class="hover:text-[#1d1d1f] transition-colors">Showcases</a>
+                <a href="#gear" class="hover:text-[#1d1d1f] transition-colors">Sony 4K Gear</a>
+                <a href="#vergleich" class="hover:text-[#1d1d1f] transition-colors">Vergleich</a>
+                <a href="#team" class="hover:text-[#1d1d1f] transition-colors">Über Uns</a>
+                <a href="#rechner" class="hover:text-[#1d1d1f] transition-colors">Preise & Paket</a>
             </nav>
 
-            <!-- CTA -->
+            <!-- Apple Blue Pill Button -->
             <div class="flex items-center gap-3">
-                <a href="#konfigurator" class="px-4 py-1.5 rounded-full bg-white text-black hover:bg-slate-200 text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
+                <a href="#rechner" class="px-5 py-2 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-sm">
                     Projekt starten
                 </a>
             </div>
         </header>
     </div>
 
-    <!-- MAIN CONTENT WRAPPER -->
+    <!-- MAIN WRAPPER -->
     <main class="pt-36 pb-32 px-5 sm:px-8 max-w-6xl mx-auto space-y-36">
 
-        <!-- 1. HERO SECTION -->
-        <section class="text-center space-y-8 pt-6">
-            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill text-xs font-mono text-slate-300">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <span>Wien & Umgebung · Sony 4K Media & Custom Code</span>
-                <span class="text-slate-600">|</span>
-                <span class="text-slate-400">Kein Baukasten-Lag</span>
+        <!-- 1. HERO SECTION (APPLE AESTHETIC) -->
+        <section class="text-center space-y-8 pt-8">
+            <!-- Location Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-black/[0.08] text-xs font-mono text-[#86868b] shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="text-[#1d1d1f] font-semibold">Wien & Umgebung</span>
+                <span class="text-slate-300">|</span>
+                <span>Sony 4K Produktion & Custom Code</span>
             </div>
 
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] text-white max-w-5xl mx-auto leading-[1.02]">
+            <!-- Big Apple Headline -->
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] text-apple-gradient max-w-5xl mx-auto leading-[1.02]">
                 Websites, die verkaufen.<br>
-                <span class="bg-gradient-to-r from-white via-slate-200 to-slate-500 bg-clip-text text-transparent">Fotos, die beeindrucken.</span>
+                <span class="text-[#0071e3]">Fotos, die überzeugen.</span>
             </h1>
 
-            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-                Schluss mit generischen Stockfotos und langsamen WordPress-Vorlagen. Wir bauen kompromisslos schnelle Websites und kommen mit unserer <strong class="text-white font-semibold">Sony 4K Kamera</strong> direkt zu Ihnen nach Wien, um Ihr Team, Ihren Laden und Ihre Produkte in Szene zu setzen.
+            <!-- Subheading -->
+            <p class="text-[#86868b] text-base sm:text-xl max-w-2xl mx-auto font-normal leading-relaxed">
+                Keine lahmen WordPress-Themes. Keine generischen Stockfotos. Wir verbinden blitzschnelle Webentwicklung mit professioneller <strong class="text-[#1d1d1f] font-semibold">Sony 4K-Fotografie & Video vor Ort</strong> bei Ihnen in Wien.
             </p>
 
+            <!-- Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <a href="#demos" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-black hover:bg-slate-100 font-bold text-sm flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                <a href="#demos" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-bold text-sm flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-apple">
                     <i data-lucide="play" class="w-4 h-4 fill-current"></i>
                     <span>Live Demos ansehen</span>
                 </a>
-                <a href="https://wa.me/?text=Hallo%20MD%20Digital,%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20in%20Wien!" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full glass-pill hover:bg-white/10 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all">
-                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                <a href="https://wa.me/?text=Hallo%20MD%20Digital,%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20in%20Wien!" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#e8e8ed] hover:bg-[#dcdce2] text-[#1d1d1f] font-semibold text-sm flex items-center justify-center gap-2.5 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
                     <span>WhatsApp Erstgespräch</span>
                 </a>
             </div>
 
-            <!-- Stats Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-10 max-w-4xl mx-auto">
-                <div class="spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Ladezeit</div>
-                    <div class="text-2xl font-bold font-mono text-white mt-1">&lt; 0.4s</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Google Lighthouse 100/100</div>
+            <!-- Apple Clean Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-12 max-w-4xl mx-auto">
+                <div class="apple-card p-5 rounded-3xl text-left">
+                    <div class="badge-mono text-[#86868b]">Ladezeit</div>
+                    <div class="text-2xl lg:text-3xl font-extrabold font-mono text-[#1d1d1f] mt-1">&lt; 0.4s</div>
+                    <div class="text-xs text-[#86868b] mt-1">100/100 Google Lighthouse</div>
                 </div>
-                <div class="spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Foto & Video</div>
-                    <div class="text-2xl font-bold font-mono text-white mt-1">Sony 4K</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Tamron 70-200mm f/2.8</div>
+                <div class="apple-card p-5 rounded-3xl text-left">
+                    <div class="badge-mono text-[#86868b]">Kamera-Rig</div>
+                    <div class="text-2xl lg:text-3xl font-extrabold font-mono text-[#0071e3] mt-1">Sony 4K</div>
+                    <div class="text-xs text-[#86868b] mt-1">Tamron 70-200mm f/2.8</div>
                 </div>
-                <div class="spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Codebasis</div>
-                    <div class="text-2xl font-bold font-mono text-white mt-1">100% Handcrafted</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Zero Bloatware</div>
+                <div class="apple-card p-5 rounded-3xl text-left">
+                    <div class="badge-mono text-[#86868b]">Codebasis</div>
+                    <div class="text-2xl lg:text-3xl font-extrabold font-mono text-[#1d1d1f] mt-1">Zero Lag</div>
+                    <div class="text-xs text-[#86868b] mt-1">100% Handcrafted Code</div>
                 </div>
-                <div class="spotlight-card p-4 rounded-2xl text-left">
-                    <div class="badge-mono text-slate-500">Service</div>
-                    <div class="text-2xl font-bold font-mono text-white mt-1">Wien vor Ort</div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Persönliches Kennenlernen</div>
+                <div class="apple-card p-5 rounded-3xl text-left">
+                    <div class="badge-mono text-[#86868b]">Standort</div>
+                    <div class="text-2xl lg:text-3xl font-extrabold font-mono text-emerald-600 mt-1">Wien</div>
+                    <div class="text-xs text-[#86868b] mt-1">Persönlich vor Ort</div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. PRODUCTION HARDWARE RIG (REAL SONY & TAMRON PHOTOGRAPHY) -->
-        <section id="camera-gear" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <!-- 2. HARDWARE & OPTIK (SONY & TAMRON SHOWCASE IN APPLE PEDESTAL STYLE) -->
+        <section id="gear" class="space-y-8 scroll-mt-28">
+            <div class="border-b border-black/[0.08] pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div>
-                    <span class="badge-mono text-emerald-400">Hardware & Optik</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
-                        Unser Kamera-Setup. Studio-Qualität vor Ort.
+                    <span class="badge-mono text-[#0071e3]">Hardware & Optik</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1d1d1f] tracking-tight mt-1">
+                        Unser Kamera-Setup. Studioqualität vor Ort.
                     </h2>
                 </div>
-                <span class="badge-mono text-slate-500">Marcel Pasik · Director of Photography</span>
+                <span class="badge-mono text-[#86868b]">Marcel Pasik · Director of Photography</span>
             </div>
 
-            <!-- Bento Rig with Real Gear Images -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+            <!-- Apple Bento Grid with Real Gear Images -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
 
-                <!-- Card 1: Sony ZV-E10 Body with Real Image -->
-                <div class="md:col-span-7 spotlight-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                <!-- Sony ZV-E10 Body -->
+                <div class="md:col-span-7 apple-card rounded-3xl overflow-hidden flex flex-col justify-between group">
                     <div class="p-8 space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="badge-mono text-blue-400">Cinema Mirrorless Body</span>
-                            <span class="badge-mono text-slate-400">4K HDR Video & 24.2 MP</span>
+                            <span class="badge-mono text-[#0071e3] font-bold">Cinema Mirrorless Body</span>
+                            <span class="badge-mono text-[#86868b]">4K HDR & 24.2 MP</span>
                         </div>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Sony ZV-E10</h3>
-                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-lg">
-                            Ausgestattet mit einem großen APS-C Kamerasensor, 4K Oversampling und blitzschnellem Real-Time Eye AF. Fängt feine Texturen, Raumstimmungen und Bewegungen in gestochen scharfer Studio-Qualität ein.
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1d1d1f]">Sony ZV-E10</h3>
+                        <p class="text-sm text-[#86868b] leading-relaxed max-w-lg">
+                            Ausgestattet mit einem großen APS-C Kamerasensor, 4K Oversampling und blitzschnellem Real-Time Eye AF. Fängt Texturen, Raumstimmungen und feine Details knackscharf ein.
                         </p>
                     </div>
 
                     <!-- Real Photo of Sony Camera -->
-                    <div class="relative h-64 overflow-hidden border-t border-white/10">
-                        <img src="assets/images/sony-camera.jpg" alt="Sony Mirrorless Camera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#08090e] via-transparent to-transparent"></div>
+                    <div class="relative h-72 overflow-hidden border-t border-black/[0.06] bg-[#fafafa]">
+                        <img src="assets/images/sony-camera.jpg" alt="Sony ZV-E10 Camera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
 
-                <!-- Card 2: Tamron 70-200mm f/2.8 Lens with Real Image -->
-                <div class="md:col-span-5 spotlight-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                <!-- Tamron 70-200mm f/2.8 Lens -->
+                <div class="md:col-span-5 apple-card rounded-3xl overflow-hidden flex flex-col justify-between group">
                     <div class="p-8 space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="badge-mono text-indigo-400">Telephoto Prime Glass</span>
-                            <span class="badge-mono text-emerald-400">f/2.8 Konstant</span>
+                            <span class="badge-mono text-[#0071e3] font-bold">Telephoto Prime Glass</span>
+                            <span class="badge-mono text-emerald-600 font-bold">f/2.8 Konstant</span>
                         </div>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Tamron 70-200mm f/2.8</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Das legendäre Telezoom mit durchgehender f/2.8 Lichtstärke. Erzeugt das unvergleichlich weiche, filmische Bokeh im Hintergrund und stellt Teammitglieder und Produkte plastisch frei.
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1d1d1f]">Tamron 70-200mm f/2.8</h3>
+                        <p class="text-sm text-[#86868b] leading-relaxed">
+                            Das legendäre Telezoom mit konstanter f/2.8 Lichtstärke. Erzeugt das unvergleichlich weiche, filmische Bokeh im Hintergrund für Team-Porträts und Detailaufnahmen.
                         </p>
                     </div>
 
-                    <!-- Real Photo of Telephoto Lens -->
-                    <div class="relative h-64 overflow-hidden border-t border-white/10">
-                        <img src="assets/images/tamron-lens.jpg" alt="Telephoto Lens Glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#08090e] via-transparent to-transparent"></div>
+                    <!-- Real Photo of Lens -->
+                    <div class="relative h-72 overflow-hidden border-t border-black/[0.06] bg-[#fafafa]">
+                        <img src="assets/images/tamron-lens.jpg" alt="Tamron 70-200mm Lens Glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
 
-                <!-- Card 3: Adobe Photoshop Color Science -->
-                <div class="md:col-span-6 spotlight-card p-6 rounded-3xl flex items-center gap-6">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
-                        <i data-lucide="sliders" class="w-7 h-7 text-blue-400"></i>
+                <!-- Feature 1: Adobe Photoshop RAW Grading -->
+                <div class="md:col-span-6 apple-card p-6 rounded-3xl flex items-center gap-6">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+                        <i data-lucide="sliders" class="w-7 h-7 text-[#0071e3]"></i>
                     </div>
                     <div>
-                        <h4 class="text-base font-bold text-white">Adobe Photoshop RAW Grading</h4>
-                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <h4 class="text-base font-bold text-[#1d1d1f]">Adobe Photoshop RAW Grading</h4>
+                        <p class="text-xs text-[#86868b] mt-1 leading-relaxed">
                             Keine Standard-Filter. Jedes Bild wird in Adobe Lightroom und Photoshop individuell farbkorrigiert und auf Ihre Corporate Identity abgestimmt.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 4: 100% Commercial Rights -->
-                <div class="md:col-span-6 spotlight-card p-6 rounded-3xl flex items-center gap-6">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
-                        <i data-lucide="shield-check" class="w-7 h-7 text-emerald-400"></i>
+                <!-- Feature 2: 100% Commercial Rights -->
+                <div class="md:col-span-6 apple-card p-6 rounded-3xl flex items-center gap-6">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-emerald-600"></i>
                     </div>
                     <div>
-                        <h4 class="text-base font-bold text-white">Alle Bildrechte uneingeschränkt inklusive</h4>
-                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">
-                            Sie erhalten alle hochauflösenden Originaldateien zur freien Verwendung für Ihre Website, Social Media (Instagram, TikTok) und Print.
+                        <h4 class="text-base font-bold text-[#1d1d1f]">Alle Bildrechte uneingeschränkt inklusive</h4>
+                        <p class="text-xs text-[#86868b] mt-1 leading-relaxed">
+                            Sie erhalten alle hochauflösenden Bilddateien zur freien Verwendung für Ihre Website, Social Media (Instagram, TikTok) und Print.
                         </p>
                     </div>
                 </div>
@@ -261,67 +267,67 @@
             </div>
         </section>
 
-        <!-- 3. QUALITÄTS-VERGLEICH (WARUM KUNDEN UNS WÄHLEN) -->
+        <!-- 3. VERGLEICH: WARUM KUNDEN UNS WÄHLEN -->
         <section id="vergleich" class="space-y-8 scroll-mt-28">
             <div class="text-center space-y-2 max-w-xl mx-auto">
-                <span class="badge-mono text-blue-400">Direkter Vergleich</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <span class="badge-mono text-[#0071e3]">Direkter Vergleich</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1d1d1f] tracking-tight">
                     Der Unterschied, den man sieht und spürt.
                 </h2>
-                <p class="text-xs sm:text-sm text-slate-400">
-                    Warum Standard-Webdesigner und Baukästen lokale Kunden verlieren.
+                <p class="text-xs sm:text-sm text-[#86868b]">
+                    Warum Standard-Webdesigner und Baukästen lokale Kunden in Wien verlieren.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 
                 <!-- 08/15 Standard -->
-                <div class="p-8 rounded-3xl border border-red-500/20 bg-red-950/10 space-y-5">
+                <div class="p-8 rounded-3xl border border-red-200 bg-red-50/50 space-y-5">
                     <div class="flex items-center justify-between">
-                        <span class="badge-mono text-red-400 font-bold">Typischer Baukasten / Billig-Agentur</span>
-                        <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
+                        <span class="badge-mono text-red-600 font-bold">Typischer Baukasten / Billig-Agentur</span>
+                        <i data-lucide="x-circle" class="w-5 h-5 text-red-500"></i>
                     </div>
-                    <ul class="text-xs text-slate-400 space-y-3 font-mono">
+                    <ul class="text-xs text-[#86868b] space-y-3 font-mono">
                         <li class="flex items-start gap-2.5">
-                            <span class="text-red-400">&times;</span>
+                            <span class="text-red-500 font-bold">&times;</span>
                             <span>Kunde muss Fotos selbst mit dem Handy machen oder zahlt für unechte Stockfotos.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="text-red-400">&times;</span>
+                            <span class="text-red-500 font-bold">&times;</span>
                             <span>Schwere WordPress-Plugins sorgen für Ladezeiten von 3 bis 5 Sekunden.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="text-red-400">&times;</span>
-                            <span>Monatliche Knebelverträge für „Wartung“ ohne Mehrwert.</span>
+                            <span class="text-red-500 font-bold">&times;</span>
+                            <span>Monatliche Knebelverträge für „Wartung“ ohne echten Mehrwert.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="text-red-400">&times;</span>
-                            <span>Kein lokaler Bezug: Callcenter-Support ohne persönliche Beratung.</span>
+                            <span class="text-red-500 font-bold">&times;</span>
+                            <span>Kein lokaler Bezug: Callcenter-Support ohne persönliche Beratung vor Ort.</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- MD DIGITAL Standard -->
-                <div class="p-8 rounded-3xl border border-emerald-500/40 bg-emerald-950/10 space-y-5 shadow-2xl relative overflow-hidden">
+                <div class="p-8 rounded-3xl border border-emerald-300 bg-emerald-50/60 space-y-5 shadow-apple relative overflow-hidden">
                     <div class="flex items-center justify-between">
-                        <span class="badge-mono text-emerald-400 font-bold">MD Digital Standard</span>
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+                        <span class="badge-mono text-emerald-700 font-bold">MD Digital Standard</span>
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
                     </div>
-                    <ul class="text-xs text-slate-200 space-y-3 font-mono">
+                    <ul class="text-xs text-[#1d1d1f] space-y-3 font-mono">
                         <li class="flex items-start gap-2.5">
-                            <span class="text-emerald-400">&check;</span>
+                            <span class="text-emerald-600 font-bold">&check;</span>
                             <span>Marcel kommt mit der Sony ZV-E10 & Tamron 70-200mm f/2.8 direkt zu Ihnen ins Geschäft.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="text-emerald-400">&check;</span>
+                            <span class="text-emerald-600 font-bold">&check;</span>
                             <span>0.4s Ladezeit durch handgeschriebenen, schlanken Code auf Apple M4 Basis.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="text-emerald-400">&check;</span>
+                            <span class="text-emerald-600 font-bold">&check;</span>
                             <span>Faire Festpreise. Einmalige Zahlung, die Website gehört zu 100% Ihnen.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="text-emerald-400">&check;</span>
+                            <span class="text-emerald-600 font-bold">&check;</span>
                             <span>Wien vor Ort: Wir kommen persönlich vorbei und besprechen alles bei einem Kaffee.</span>
                         </li>
                     </ul>
@@ -330,179 +336,180 @@
             </div>
         </section>
 
-        <!-- 4. INTERACTIVE LIVE DEMO SCREEN (MacBook / Studio Display Mockup) -->
+        <!-- 4. INTERACTIVE LIVE DEMO SCREEN (STUDIO DISPLAY LOOK) -->
         <section id="demos" class="space-y-8 scroll-mt-28">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-black/[0.08] pb-6">
                 <div>
-                    <span class="badge-mono text-blue-400">Interaktive Showcases</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+                    <span class="badge-mono text-[#0071e3]">Live Showcases</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1d1d1f] tracking-tight mt-1">
                         Echte Kundenkonzepte. Testen Sie sie live.
                     </h2>
                 </div>
                 
-                <div class="glass-pill p-1 rounded-full flex items-center gap-1 self-start md:self-auto">
-                    <button id="tab-barber" onclick="switchDemo('barber')" class="px-4 py-2 rounded-full text-xs font-semibold bg-white text-black transition-all">
+                <!-- Tab Switcher -->
+                <div class="apple-glass p-1.5 rounded-full flex items-center gap-1 self-start md:self-auto shadow-sm">
+                    <button id="tab-barber" onclick="switchDemo('barber')" class="px-5 py-2 rounded-full text-xs font-semibold bg-[#1d1d1f] text-white transition-all">
                         Fade & Blade (Barbershop 1010)
                     </button>
-                    <button id="tab-tech" onclick="switchDemo('tech')" class="px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all">
+                    <button id="tab-tech" onclick="switchDemo('tech')" class="px-5 py-2 rounded-full text-xs font-semibold text-[#86868b] hover:text-[#1d1d1f] transition-all">
                         PhoneLab (Tech Repair 1070)
                     </button>
                 </div>
             </div>
 
-            <!-- Virtual Display Frame -->
-            <div class="spotlight-card rounded-3xl p-3 sm:p-5 shadow-2xl relative overflow-hidden">
-                <div class="flex items-center justify-between pb-3 px-3 border-b border-white/5 text-xs text-slate-500 font-mono">
+            <!-- Virtual Studio Display Frame -->
+            <div class="apple-card rounded-3xl p-4 sm:p-6 shadow-apple-lg relative overflow-hidden bg-white">
+                <div class="flex items-center justify-between pb-3 px-3 border-b border-black/[0.06] text-xs text-[#86868b] font-mono">
                     <div class="flex items-center gap-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                        <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
                     </div>
-                    <div id="demo-url" class="px-6 py-1 rounded-full bg-black/40 border border-white/5 text-[11px] text-slate-300 flex items-center gap-1.5">
-                        <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                    <div id="demo-url" class="px-6 py-1.5 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] text-[#1d1d1f] font-semibold flex items-center gap-1.5">
+                        <i data-lucide="lock" class="w-3 h-3 text-emerald-600"></i>
                         <span>fade-and-blade.at · Herrengasse 1010 Wien</span>
                     </div>
-                    <a id="demo-external-link" href="demo-barber.html" target="_blank" class="hover:text-white flex items-center gap-1 transition-colors">
+                    <a id="demo-external-link" href="demo-barber.html" target="_blank" class="hover:text-[#0071e3] flex items-center gap-1 transition-colors font-medium">
                         <span>Vollbild</span>
                         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                     </a>
                 </div>
 
-                <div class="relative w-full h-[540px] rounded-2xl overflow-hidden mt-3 bg-black border border-white/5">
+                <div class="relative w-full h-[560px] rounded-2xl overflow-hidden mt-4 bg-slate-100 border border-black/[0.06]">
                     <iframe id="demo-iframe" src="demo-barber.html" class="w-full h-full border-0"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- 5. TEAM: DAOUD & MARCEL -->
+        <!-- 5. TEAM SECTION: DAOUD & MARCEL -->
         <section id="team" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-white/10 pb-6 flex items-center justify-between">
+            <div class="border-b border-black/[0.08] pb-6 flex items-center justify-between">
                 <div>
-                    <span class="badge-mono text-slate-400">Gründer</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+                    <span class="badge-mono text-[#86868b]">Gründer</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1d1d1f] tracking-tight mt-1">
                         Zwei Spezialisten. Keine Zwischenhändler.
                     </h2>
                 </div>
-                <span class="badge-mono text-emerald-400">Standort Wien</span>
+                <span class="badge-mono text-emerald-600 font-bold">Standort Wien</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 
                 <!-- Daoud Sahel -->
-                <div class="spotlight-card p-8 rounded-3xl space-y-4">
+                <div class="apple-card p-8 rounded-3xl space-y-4">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-white text-black font-mono font-bold flex items-center justify-center text-sm">
+                        <div class="w-14 h-14 rounded-2xl bg-[#1d1d1f] text-white font-mono font-bold flex items-center justify-center text-base shadow-md">
                             DS
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-white">Daoud Sahel</h3>
-                            <div class="text-xs font-mono text-blue-400">Lead Web Architecture & Digital Systems</div>
+                            <h3 class="text-xl font-bold text-[#1d1d1f]">Daoud Sahel</h3>
+                            <div class="text-xs font-mono text-[#0071e3] font-semibold">Lead Web Architecture & Systems</div>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Entwickelt maßgeschneiderte, ultra-performante Web-Architekturen auf Apple Silicon M4. Garantiert Ladezeiten unter 0.4 Sekunden, modernste UX-Animationen und Top-Platzierungen bei lokalen Google Maps Suchanfragen.
+                    <p class="text-xs sm:text-sm text-[#86868b] leading-relaxed">
+                        Entwickelt maßgeschneiderte, extrem schnelle Web-Architekturen auf Apple Silicon M4. Garantiert Ladezeiten unter 0.4 Sekunden, modernste UX-Animationen und Top-Platzierungen bei lokalen Google Maps Suchanfragen in Wien.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Clean Code</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Local SEO Wien</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Conversion UX</span>
+                        <span class="px-3 py-1 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] font-mono text-[#1d1d1f]">Clean Code</span>
+                        <span class="px-3 py-1 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] font-mono text-[#1d1d1f]">Local SEO Wien</span>
+                        <span class="px-3 py-1 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] font-mono text-[#1d1d1f]">Conversion UX</span>
                     </div>
                 </div>
 
                 <!-- Marcel Pasik -->
-                <div class="spotlight-card p-8 rounded-3xl space-y-4">
+                <div class="apple-card p-8 rounded-3xl space-y-4">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-white text-black font-mono font-bold flex items-center justify-center text-sm">
+                        <div class="w-14 h-14 rounded-2xl bg-[#0071e3] text-white font-mono font-bold flex items-center justify-center text-base shadow-md">
                             MP
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-white">Marcel Pasik</h3>
-                            <div class="text-xs font-mono text-indigo-400">Director of Photography & Visual Production</div>
+                            <h3 class="text-xl font-bold text-[#1d1d1f]">Marcel Pasik</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold">Director of Photography & Media</div>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
+                    <p class="text-xs sm:text-sm text-[#86868b] leading-relaxed">
                         Verantwortlich für die visuelle Ästhetik vor Ort in Wien. Führt das Sony 4K & Tamron 70-200mm f/2.8 Setup und verwandelt rohe Kameradaten in Adobe Photoshop in kinoreife Marketing-Fotos für Ihren Betrieb.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Sony 4K Production</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Tamron Bokeh Master</span>
-                        <span class="px-2.5 py-1 rounded-full bg-white/5 text-[10px] font-mono text-slate-300">Photoshop Retusche</span>
+                        <span class="px-3 py-1 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] font-mono text-[#1d1d1f]">Sony 4K Production</span>
+                        <span class="px-3 py-1 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] font-mono text-[#1d1d1f]">Tamron Bokeh Master</span>
+                        <span class="px-3 py-1 rounded-full bg-[#f5f5f7] border border-black/[0.06] text-[11px] font-mono text-[#1d1d1f]">Photoshop Retusche</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- 6. LIVE KOSTEN-KONFIGURATOR (MIT SOFORT-WHATSAPP-ANFRAGE) -->
-        <section id="konfigurator" class="spotlight-card rounded-3xl p-8 sm:p-12 space-y-8 scroll-mt-28 border-white/20">
+        <!-- 6. LIVE KOSTEN-KONFIGURATOR (APPLE CARD STYLE) -->
+        <section id="rechner" class="apple-card rounded-3xl p-8 sm:p-12 space-y-8 scroll-mt-28 border-black/[0.08] shadow-apple-lg">
             <div class="text-center space-y-2 max-w-xl mx-auto">
-                <span class="badge-mono text-emerald-400">Transparente Festpreise</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <span class="badge-mono text-[#0071e3]">Transparente Festpreise</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-[#1d1d1f] tracking-tight">
                     Konfigurieren Sie Ihr Paket.
                 </h2>
-                <p class="text-xs sm:text-sm text-slate-400">
+                <p class="text-xs sm:text-sm text-[#86868b]">
                     Wählen Sie Ihren gewünschten Umfang. Der Preis aktualisiert sich in Echtzeit.
                 </p>
             </div>
 
             <div class="max-w-2xl mx-auto space-y-6">
-                <!-- Option 1: Scope -->
+                <!-- Option 1: Format -->
                 <div class="space-y-2">
-                    <label class="badge-mono text-slate-400">1. Website Format</label>
+                    <label class="badge-mono text-[#86868b]">1. Website Format</label>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <button type="button" onclick="setScope('single')" id="scope-single" class="p-4 rounded-2xl glass-pill text-left transition-all border-white/40 bg-white/10">
-                            <div class="text-sm font-bold text-white flex items-center justify-between">
+                        <button type="button" onclick="setScope('single')" id="scope-single" class="p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] text-left transition-all">
+                            <div class="text-sm font-bold text-[#1d1d1f] flex items-center justify-between">
                                 <span>One-Pager Express</span>
-                                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                                <i data-lucide="check-circle" class="w-4 h-4 text-[#0071e3]"></i>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1">Kompakt, schnell, ideal für Barbershops, Stores & Cafés</div>
+                            <div class="text-xs text-[#86868b] mt-1">Kompakt, schnell, ideal für Barbershops, Stores & Cafés</div>
                         </button>
-                        <button type="button" onclick="setScope('multi')" id="scope-multi" class="p-4 rounded-2xl glass-pill text-left transition-all border-white/10 hover:border-white/25">
-                            <div class="text-sm font-bold text-white flex items-center justify-between">
+                        <button type="button" onclick="setScope('multi')" id="scope-multi" class="p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] text-left transition-all hover:border-black/[0.2]">
+                            <div class="text-sm font-bold text-[#1d1d1f] flex items-center justify-between">
                                 <span>Multi-Page Business</span>
-                                <i data-lucide="circle" class="w-4 h-4 text-slate-600"></i>
+                                <i data-lucide="circle" class="w-4 h-4 text-slate-400"></i>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1">Mehrere Unterseiten, Shop-Katalog oder Buchungssystem</div>
+                            <div class="text-xs text-[#86868b] mt-1">Mehrere Unterseiten, Shop-Katalog oder Buchungssystem</div>
                         </button>
                     </div>
                 </div>
 
                 <!-- Option 2: Addons -->
                 <div class="space-y-2">
-                    <label class="badge-mono text-slate-400">2. Vor-Ort Services Wien</label>
+                    <label class="badge-mono text-[#86868b]">2. Vor-Ort Services Wien</label>
                     <div class="space-y-2">
-                        <div onclick="toggleAddon('photo')" id="addon-photo" class="p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/40 bg-white/5 transition-all">
+                        <div onclick="toggleAddon('photo')" id="addon-photo" class="p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] flex items-center justify-between cursor-pointer transition-all">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="camera" class="w-5 h-5 text-emerald-400"></i>
+                                <i data-lucide="camera" class="w-5 h-5 text-[#0071e3]"></i>
                                 <div>
-                                    <div class="text-xs sm:text-sm font-semibold text-white">4K Vor-Ort Foto-Shooting mit Marcel</div>
-                                    <div class="text-[11px] text-slate-400">Sony ZV-E10 + Tamron 70-200mm Aufnahmen & Photoshop Retusche</div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">4K Vor-Ort Foto-Shooting mit Marcel</div>
+                                    <div class="text-[11px] text-[#86868b]">Sony ZV-E10 + Tamron 70-200mm Aufnahmen & Photoshop Retusche</div>
                                 </div>
                             </div>
-                            <span class="badge-mono text-emerald-400 font-bold">+250 €</span>
+                            <span class="badge-mono text-[#0071e3] font-bold">+250 €</span>
                         </div>
 
-                        <div onclick="toggleAddon('seo')" id="addon-seo" class="p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/40 bg-white/5 transition-all">
+                        <div onclick="toggleAddon('seo')" id="addon-seo" class="p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] flex items-center justify-between cursor-pointer transition-all">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-blue-400"></i>
+                                <i data-lucide="map-pin" class="w-5 h-5 text-emerald-600"></i>
                                 <div>
-                                    <div class="text-xs sm:text-sm font-semibold text-white">Google Maps & Local SEO Setup</div>
-                                    <div class="text-[11px] text-slate-400">Top-Platzierung für Wiener Suchbegriffe in Ihrem Bezirk</div>
+                                    <div class="text-xs sm:text-sm font-semibold text-[#1d1d1f]">Google Maps & Local SEO Setup</div>
+                                    <div class="text-[11px] text-[#86868b]">Top-Platzierung für Wiener Suchbegriffe in Ihrem Bezirk</div>
                                 </div>
                             </div>
-                            <span class="badge-mono text-blue-400 font-bold">+180 €</span>
+                            <span class="badge-mono text-emerald-600 font-bold">+180 €</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Price Box & Direct CTA -->
-                <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="p-6 rounded-2xl bg-[#fafafa] border border-black/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6">
                     <div>
-                        <div class="badge-mono text-slate-500">Kalkulierter Paketpreis</div>
-                        <div class="text-4xl font-extrabold text-white font-mono mt-1" id="total-price">740 €</div>
-                        <div class="text-[11px] text-slate-400 mt-1">Einmalige Investition · Keine monatlichen Knebelverträge</div>
+                        <div class="badge-mono text-[#86868b]">Kalkulierter Paketpreis</div>
+                        <div class="text-4xl font-black text-[#1d1d1f] font-mono mt-1" id="total-price">740 €</div>
+                        <div class="text-[11px] text-[#86868b] mt-1">Einmalige Investition · Keine monatlichen Knebelverträge</div>
                     </div>
-                    <a id="whatsapp-quote-btn" href="#" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white text-black hover:bg-slate-200 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xl">
+                    <a id="whatsapp-quote-btn" href="#" target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-md">
                         <i data-lucide="message-circle" class="w-4 h-4"></i>
                         <span>Paket via WhatsApp anfragen</span>
                     </a>
@@ -513,37 +520,37 @@
         <!-- 7. FAQ ACCORDION -->
         <section class="space-y-6 max-w-3xl mx-auto">
             <div class="text-center space-y-1">
-                <span class="badge-mono text-slate-500">Häufige Fragen</span>
-                <h3 class="text-2xl font-bold text-white">Alles, was Sie wissen müssen.</h3>
+                <span class="badge-mono text-[#86868b]">Häufige Fragen</span>
+                <h3 class="text-2xl font-bold text-[#1d1d1f]">Alles, was Sie wissen müssen.</h3>
             </div>
 
             <div class="space-y-3 text-xs sm:text-sm">
-                <div class="spotlight-card p-5 rounded-2xl space-y-2">
-                    <div class="font-bold text-white flex items-center justify-between">
+                <div class="apple-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-[#1d1d1f] flex items-center justify-between">
                         <span>Wie lange dauert die Fertigstellung der Website?</span>
-                        <i data-lucide="clock" class="w-4 h-4 text-slate-500"></i>
+                        <i data-lucide="clock" class="w-4 h-4 text-[#86868b]"></i>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
+                    <p class="text-[#86868b] leading-relaxed">
                         In der Regel ist Ihre Website innerhalb von 5 bis 7 Werktagen komplett einsatzbereit. Das Foto-Shooting findet nach Absprache meist in den ersten 48 Stunden statt.
                     </p>
                 </div>
 
-                <div class="spotlight-card p-5 rounded-2xl space-y-2">
-                    <div class="font-bold text-white flex items-center justify-between">
+                <div class="apple-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-[#1d1d1f] flex items-center justify-between">
                         <span>Gehören die Fotos danach wirklich zu 100% mir?</span>
-                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
+                    <p class="text-[#86868b] leading-relaxed">
                         Ja, absolut! Sie erhalten alle bearbeiteten hochauflösenden Bilddateien zur freien, uneingeschränkten Nutzung für Ihre Website, Social Media (Instagram, TikTok) und Printwerbung.
                     </p>
                 </div>
 
-                <div class="spotlight-card p-5 rounded-2xl space-y-2">
-                    <div class="font-bold text-white flex items-center justify-between">
+                <div class="apple-card p-5 rounded-2xl space-y-2">
+                    <div class="font-bold text-[#1d1d1f] flex items-center justify-between">
                         <span>Gibt es versteckte monatliche Gebühren?</span>
-                        <i data-lucide="shield" class="w-4 h-4 text-blue-400"></i>
+                        <i data-lucide="shield" class="w-4 h-4 text-[#0071e3]"></i>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">
+                    <p class="text-[#86868b] leading-relaxed">
                         Nein. Wir arbeiten mit transparenten Festpreisen. Die Domain und das Hosting kosten Sie bei Standard-Anbietern lediglich ca. 2 bis 5 Euro pro Monat – ohne Agenturaufschlag.
                     </p>
                 </div>
@@ -553,31 +560,20 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-white/10 py-12 px-6 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono">
+    <footer class="border-t border-black/[0.08] py-12 px-6 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#86868b] font-mono">
         <div>
-            <span class="text-white font-bold">MD DIGITAL WIEN</span> — Daoud Sahel & Marcel Pasik
+            <span class="text-[#1d1d1f] font-bold">MD DIGITAL WIEN</span> — Daoud Sahel & Marcel Pasik
         </div>
         <div class="flex items-center gap-6">
             <span>Sony 4K & Apple Silicon Architecture</span>
-            <a href="https://wa.me/" class="hover:text-white transition-colors">WhatsApp</a>
-            <a href="tel:+43" class="hover:text-white transition-colors">Telefon</a>
+            <a href="https://wa.me/" class="hover:text-[#1d1d1f] transition-colors">WhatsApp</a>
+            <a href="tel:+43" class="hover:text-[#1d1d1f] transition-colors">Telefon</a>
         </div>
     </footer>
 
     <!-- INTERACTIVE ENGINE -->
     <script>
         lucide.createIcons();
-
-        // Spotlight Mouse Effect
-        document.querySelectorAll('.spotlight-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
 
         // Demo Switcher
         function switchDemo(type) {
@@ -589,16 +585,16 @@
 
             if (type === 'barber') {
                 iframe.src = 'demo-barber.html';
-                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i><span>fade-and-blade.at · Herrengasse 1010 Wien</span>';
+                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-600"></i><span>fade-and-blade.at · Herrengasse 1010 Wien</span>';
                 externalLink.href = 'demo-barber.html';
-                tabBtnBarber.className = 'px-4 py-2 rounded-full text-xs font-semibold bg-white text-black transition-all';
-                tabBtnTech.className = 'px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all';
+                tabBtnBarber.className = 'px-5 py-2 rounded-full text-xs font-semibold bg-[#1d1d1f] text-white transition-all';
+                tabBtnTech.className = 'px-5 py-2 rounded-full text-xs font-semibold text-[#86868b] hover:text-[#1d1d1f] transition-all';
             } else {
                 iframe.src = 'demo-tech.html';
-                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i><span>phonelab-wien.at · Neubaugasse 1070 Wien</span>';
+                urlBadge.innerHTML = '<i data-lucide="lock" class="w-3 h-3 text-emerald-600"></i><span>phonelab-wien.at · Neubaugasse 1070 Wien</span>';
                 externalLink.href = 'demo-tech.html';
-                tabBtnTech.className = 'px-4 py-2 rounded-full text-xs font-semibold bg-white text-black transition-all';
-                tabBtnBarber.className = 'px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all';
+                tabBtnTech.className = 'px-5 py-2 rounded-full text-xs font-semibold bg-[#1d1d1f] text-white transition-all';
+                tabBtnBarber.className = 'px-5 py-2 rounded-full text-xs font-semibold text-[#86868b] hover:text-[#1d1d1f] transition-all';
             }
             lucide.createIcons();
         }
@@ -614,21 +610,21 @@
             const multiBtn = document.getElementById('scope-multi');
 
             if (scope === 'single') {
-                singleBtn.className = 'p-4 rounded-2xl glass-pill text-left transition-all border-white/40 bg-white/10';
+                singleBtn.className = 'p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] text-left transition-all';
                 singleBtn.querySelector('i').setAttribute('data-lucide', 'check-circle');
-                singleBtn.querySelector('i').className = 'w-4 h-4 text-emerald-400';
+                singleBtn.querySelector('i').className = 'w-4 h-4 text-[#0071e3]';
                 
-                multiBtn.className = 'p-4 rounded-2xl glass-pill text-left transition-all border-white/10 hover:border-white/25';
+                multiBtn.className = 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] text-left transition-all hover:border-black/[0.2]';
                 multiBtn.querySelector('i').setAttribute('data-lucide', 'circle');
-                multiBtn.querySelector('i').className = 'w-4 h-4 text-slate-600';
+                multiBtn.querySelector('i').className = 'w-4 h-4 text-slate-400';
             } else {
-                multiBtn.className = 'p-4 rounded-2xl glass-pill text-left transition-all border-white/40 bg-white/10';
+                multiBtn.className = 'p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] text-left transition-all';
                 multiBtn.querySelector('i').setAttribute('data-lucide', 'check-circle');
-                multiBtn.querySelector('i').className = 'w-4 h-4 text-emerald-400';
+                multiBtn.querySelector('i').className = 'w-4 h-4 text-[#0071e3]';
 
-                singleBtn.className = 'p-4 rounded-2xl glass-pill text-left transition-all border-white/10 hover:border-white/25';
+                singleBtn.className = 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] text-left transition-all hover:border-black/[0.2]';
                 singleBtn.querySelector('i').setAttribute('data-lucide', 'circle');
-                singleBtn.querySelector('i').className = 'w-4 h-4 text-slate-600';
+                singleBtn.querySelector('i').className = 'w-4 h-4 text-slate-400';
             }
             lucide.createIcons();
             recalc();
@@ -638,11 +634,11 @@
             if (type === 'photo') {
                 hasPhoto = !hasPhoto;
                 const el = document.getElementById('addon-photo');
-                el.className = hasPhoto ? 'p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/40 bg-white/5 transition-all' : 'p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/10 opacity-50 transition-all';
+                el.className = hasPhoto ? 'p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] flex items-center justify-between cursor-pointer transition-all' : 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-60 flex items-center justify-between cursor-pointer transition-all';
             } else if (type === 'seo') {
                 hasSeo = !hasSeo;
                 const el = document.getElementById('addon-seo');
-                el.className = hasSeo ? 'p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/40 bg-white/5 transition-all' : 'p-4 rounded-2xl glass-pill flex items-center justify-between cursor-pointer border-white/10 opacity-50 transition-all';
+                el.className = hasSeo ? 'p-4 rounded-2xl bg-[#f5f5f7] border-2 border-[#0071e3] flex items-center justify-between cursor-pointer transition-all' : 'p-4 rounded-2xl bg-[#f5f5f7] border border-black/[0.06] opacity-60 flex items-center justify-between cursor-pointer transition-all';
             }
             recalc();
         }
