@@ -1,5 +1,6 @@
 # Internal Outreach & Lead Acquisition Suite (Private to Local Machine)
 outreach/
+Start-Kunden-Dashboard.command
 *.db
 *.csv
 
