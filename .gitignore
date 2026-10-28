@@ -1,0 +1,11 @@
+# Private Lead Database & Exports
+outreach/leads.db
+outreach/*.csv
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
