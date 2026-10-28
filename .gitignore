@@ -1,6 +1,6 @@
-# Private Lead Database & Exports
-outreach/leads.db
-outreach/*.csv
+# Internal Outreach & Lead Acquisition Suite (Private to Local Machine)
+outreach/
+*.db
 *.csv
 
 # Python

@@ -18,8 +18,8 @@
 Wir verbinden kompromisslos schnellen, handgeschriebenen Web-Code mit echter 4K-Kameraoptik vor Ort &mdash; ohne teuren Agentur-Wasserkopf, zu transparenten und fairen Konditionen für Wiener Klein- und Meisterbetriebe.
 
 ### 👥 Das Gründer-Team
-* **Daoud Sahel** &mdash; *Lead Web Architecture & Performance*: Entwickelt auf Apple Silicon M4 blitzschnelle Websites (< 0.4s Ladezeit, 100/100 Google Lighthouse) ohne anfällige Plugins oder WordPress-Bloatware.
-* **Marcel Pasik** &mdash; *Director of Photography & Media*: Schießt mit Sony Cinema Mirrorless 4K und Tamron 70-200mm f/2.8 SP Di VC USD G2 Teleobjektiv gestochen scharfe, authentische Porträts und Ladenaufnahmen direkt vor Ort in Wien.
+* **Daoud Sahel** &mdash; *Web-Entwicklung & Performance-Architektur*: Entwickelt auf Apple Silicon M4 blitzschnelle Websites (< 0.4s Ladezeit, 100/100 Google Lighthouse) ohne anfällige Plugins oder WordPress-Bloatware.
+* **Marcel Pasik** &mdash; *Medienproduktion & Fotografie*: Schießt mit Sony Cinema Mirrorless 4K und Tamron 70-200mm f/2.8 SP Di VC USD G2 Teleobjektiv gestochen scharfe, authentische Porträts und Ladenaufnahmen direkt vor Ort in Wien.
 
 ---
 
